@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="default">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VPN、代理和机场有什么区别？新手先看懂这三个概念 · 王牌VPN - 机场推荐与网络指南</title>
+<meta name="description" content="分清 VPN、代理协议、机场订阅和客户端的关系，理解系统代理与 TUN 的区别，并按个人设备或企业办公需求选择合适的连接方式。">
+<meta name="keywords" content="VPN与代理区别,机场是什么,代理客户端">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/">
+<meta property="og:title" content="VPN、代理和机场有什么区别？新手先看懂这三个概念">
+<meta property="og:description" content="分清 VPN、代理协议、机场订阅和客户端的关系，理解系统代理与 TUN 的区别，并按个人设备或企业办公需求选择合适的连接方式。">
+<meta property="og:url" content="https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="王牌VPN - 机场推荐与网络指南">
+<meta property="og:locale" content="zh_CN">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VPN、代理和机场有什么区别？新手先看懂这三个概念">
+<meta name="twitter:description" content="分清 VPN、代理协议、机场订阅和客户端的关系，理解系统代理与 TUN 的区别，并按个人设备或企业办公需求选择合适的连接方式。">
+
+<meta name="author" content="王牌VPN 编辑部"><meta property="article:published_time" content="2026-10-02T08:00:00&#43;08:00"><meta property="article:modified_time" content="2026-10-02T15:48:52&#43;08:00"><meta property="article:tag" content="机场推荐"><meta property="article:tag" content="代理协议"><meta property="article:tag" content="TUN"><meta property="article:tag" content="网络隐私">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌VPN 编辑部"},"dateModified":"2026-10-02T15:48:52+08:00","datePublished":"2026-10-02T08:00:00+08:00","description":"分清 VPN、代理协议、机场订阅和客户端的关系，理解系统代理与 TUN 的区别，并按个人设备或企业办公需求选择合适的连接方式。","headline":"VPN、代理和机场有什么区别？新手先看懂这三个概念","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/","name":"VPN、代理和机场有什么区别？新手先看懂这三个概念","position":2}]}]}</script>
+
+<script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
+
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
+<link rel="icon" href="https://www.wangpaivpn.com/assets/theme/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/artalk.css"><script defer src="https://www.wangpaivpn.com/assets/theme/artalk.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/theme.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/reader.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/viewer.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
+
+<script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
+
+
+
+</head>
+
+<body class="article-page">
+
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="https://www.wangpaivpn.com/"><span>王牌VPN - 机场推荐与网络指南</span></a>
+<nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/">首页</a><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></nav>
+<a class="search-toggle" href="https://www.wangpaivpn.com/search/" data-open-dialog="search-dialog" aria-haspopup="dialog" aria-controls="search-dialog" aria-label="搜索" title="搜索"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
+<button id="theme-mode" class="theme-toggle theme-cycle" type="button" aria-label="明暗模式：跟随系统，点击切换为明亮" title="跟随系统 · 点击切换为明亮">
+<svg class="theme-icon-system" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+<svg class="theme-icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
+<svg class="theme-icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+<span id="theme-mode-status" class="visually-hidden" role="status" aria-live="polite"></span>
+<button id="menu-toggle" class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="打开菜单" title="打开菜单">
+<svg class="menu-icon-open" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg class="menu-icon-close" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>
+</button>
+</div>
+</header>
+
+<div class="article-viewport"><div class="article-scroll">
+<main id="main" tabindex="-1" class="shell article-shell" data-has-toc="true">
+
+<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐与网络指南</a></li><li><span aria-current="page">VPN、代理和机场有什么区别？新手先看懂这三个概念</span></li></ol></nav>
+
+
+
+<article data-pagefind-body>
+<header class="article-header">
+<div class="eyebrow" data-pagefind-ignore>文章</div>
+<h1 data-pagefind-meta="title">VPN、代理和机场有什么区别？新手先看懂这三个概念</h1>
+<div class="metadata" data-pagefind-ignore><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a></div>
+</header>
+<div class="prose"><p>VPN、代理和“机场”经常出现在同一段介绍里，但它们回答的是不同问题：VPN 描述一种网络连接方式，代理负责代为建立或转发连接，“机场”则是中文网络社区对某类节点订阅服务的俗称。先分清这三个概念，购买和排错都会更容易。</p>
+<h2 id="heading">先把五个角色放到一起</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>主要作用</th>
+<th>你通常会接触到的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务商或机场</td>
+<td>提供账户、节点和订阅</td>
+<td>套餐、期限、节点列表、服务条款</td>
+</tr>
+<tr>
+<td>客户端</td>
+<td>管理配置并运行连接功能</td>
+<td>安装包、订阅页面、日志与连接开关</td>
+</tr>
+<tr>
+<td>协议</td>
+<td>约定客户端和服务端如何通信</td>
+<td>Shadowsocks、Trojan、VLESS 等</td>
+</tr>
+<tr>
+<td>节点</td>
+<td>一个可连接的服务端入口</td>
+<td>地址、端口、认证信息和参数</td>
+</tr>
+<tr>
+<td>分流规则</td>
+<td>决定一次请求走哪条路径</td>
+<td>直连、代理、拒绝以及策略组</td>
+</tr>
+</tbody>
+</table>
+<p>例如，你可以在服务后台取得一份订阅，再用支持该格式的客户端导入。客户端从中读出节点与规则，然后按当前配置处理请求。安装客户端，只完成了这条链中的一个环节。</p>
+<h2 id="vpn">VPN：关注网络隧道及其访问范围</h2>
+<p>VPN 是虚拟专用网络。不同产品的实现和使用目标并不一样：企业远程办公可能把特定内部网段接入公司网络，消费类产品则可能把更多流量送往远端出口。是否覆盖所有流量，要看路由和分流设置。</p>
+<p>以 WireGuard 为例，官方协议文档描述了它的握手、密钥协商和基于 UDP 的数据传输。它是一种具体的 VPN 技术，而不是“所有 VPN 都采用同一种协议”的依据。<a href="https://www.wireguard.com/protocol/">WireGuard 协议说明</a></p>
+<p>因此，看到“VPN”三个字，还需要继续问：它允许访问什么网络，哪些流量被接管，由谁运营远端出口，以及你的用途是否符合服务与组织规则。</p>
+<h2 id="heading-1">代理：由中间服务代为处理连接</h2>
+<p>代理通常接受应用的连接请求，再连接目标地址。HTTP 代理和 SOCKS 代理属于常见的本地或远端接入方式；代理软件还可以在其外部使用其他传输和加密机制。</p>
+<p>SOCKS5 规范定义了协商、认证以及 TCP 连接和 UDP 关联等流程。不能只凭一个“SOCKS5”标签，就断定整个连接具有怎样的加密或隐私属性；还要查看具体实现及承载方式。<a href="https://www.rfc-editor.org/rfc/rfc1928.html">IETF RFC 1928</a></p>
+<p>浏览器使用代理并不等于所有应用都会跟随。某些应用读取操作系统代理设置，另一些则使用自己的网络栈和设置。这也是“浏览器能用，游戏或命令行不能用”的常见排查起点。</p>
+<h2 id="heading-2">机场：是一种订阅与服务组织方式</h2>
+<p>“机场”不是一个统一的协议标准。不同服务可能使用不同核心、协议、线路和计费方式，提供的订阅格式也不一样。</p>
+<p>订阅的主要价值是集中管理配置：服务方更新节点，客户端按订阅入口获取变化。它也把一部分信任交给了服务方，因此需要检查订阅内容、账户控制和更新机制。</p>
+<p>购买时至少确认三个问题：你的客户端能否解析订阅，当前核心是否支持节点参数，以及服务方如何说明限制和维护。详细清单见<a href="/posts/airport-recommendation-guide/">机场推荐选购指南</a>。</p>
+<h2 id="-tun">系统代理与 TUN，是本地接管方式</h2>
+<p><strong>系统代理</strong>让遵循系统设置的应用把请求发送给指定代理入口。<strong>TUN 模式</strong>使用虚拟网络接口处理符合路由设置的流量，并把流量交给客户端。</p>
+<p>Clash Verge Rev 的官方入门文档把系统代理和 TUN 分别作为接入方式介绍。TUN 对不读取系统代理的应用可能有帮助，但最终路径仍受规则、路由和排除设置影响。<a href="https://www.clashverge.dev/guide/quickstart.html">Clash Verge Rev 快速入门</a></p>
+<p>这两个开关与“规则模式、全局模式、直连模式”也不是同一件事。前者解决请求怎样进入客户端，后者决定进入客户端后如何处理。开启 TUN，并不自动意味着全部请求都会走同一个远端节点。</p>
+<h2 id="-vpn-">手机显示 VPN 图标，意味着什么？</h2>
+<p>Android 为应用提供 VPN 服务接口和连接授权界面。使用这个接口的代理客户端，也可能显示系统 VPN 图标。图标说明本地 VPN 服务处于活动状态，不能单独证明远端节点已连接成功、网页访问已成功或出口符合预期。<a href="https://developer.android.com/develop/connectivity/vpn">Android VPN 官方文档</a></p>
+<p>判断是否生效，应结合客户端状态、连接日志和实际请求。Android 的具体操作见<a href="/posts/v2rayng-android-tutorial/">v2rayNG 使用教程</a>。</p>
+<h2 id="heading-3">按需求选择，比按名字选择更有效</h2>
+<p>只需要访问公司内部系统时，先使用组织认可的连接方案；需要管理多个节点和应用分流时，确认客户端、订阅与规则的适配；需要让不读取系统代理的程序进入客户端时，再检查是否需要 TUN。</p>
+<p>这个顺序能够避免两个常见误判：把客户端名称当作服务质量保证，把一个协议名称当作稳定性排名。协议和线路的关系见<a href="/posts/proxy-protocols-comparison/">四类机场协议比较</a>。</p>
+<h2 id="heading-4">常见问题</h2>
+<h3 id="heading-5">客户端免费，节点也免费吗？</h3>
+<p>不一定。客户端的软件授权与节点服务收费是两件事，安装包里通常不会自动提供适合你的订阅。</p>
+<h3 id="heading-6">全局模式会覆盖每个程序吗？</h3>
+<p>仍要看请求是否进入客户端。只开系统代理时，忽略该设置的程序可能不在处理范围内；TUN 也存在路由与应用排除设置。</p>
+<h3 id="-vpn--1">使用 VPN 或机场就能完全匿名吗？</h3>
+<p>不能这样推断。账户登录、设备信息、网站跟踪和服务方日志都会影响可识别性；网络连接方式只是其中一部分。重要账户仍需保护密码、登录会话和验证方式。</p>
+<h3 id="heading-7">换客户端能解决所有连接问题吗？</h3>
+<p>不能。只有问题来自格式兼容、软件故障或本地接管时，更换客户端才可能对症。订阅到期、线路故障和目标站点拒绝访问，需要分别排查。</p>
+<p>资料核查日期：2026 年 10 月 2 日。相关软件界面与功能以当前项目文档为准。</p>
+</div>
+<div class="article-likes" data-pagefind-ignore>
+<button id="page-like" class="like-button" type="button" aria-pressed="false" aria-describedby="page-like-message" disabled>
+<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+<span id="page-like-label">点赞</span><span id="page-like-count">—</span>
+</button><p id="page-like-message" role="status"></p>
+</div>
+<div class="article-tags" data-pagefind-ignore><a href="https://www.wangpaivpn.com/tags/airport-recommendation/"># 机场推荐</a><a href="https://www.wangpaivpn.com/tags/proxy-protocols/"># 代理协议</a><a href="https://www.wangpaivpn.com/tags/tun/"># TUN</a><a href="https://www.wangpaivpn.com/tags/privacy/"># 网络隐私</a></div>
+<nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/airport-recommendation-guide/">← 上一篇</a><a href="https://www.wangpaivpn.com/posts/proxy-protocols-comparison/">下一篇 →</a></nav>
+<section class="comments-section" data-pagefind-ignore><h2>评论</h2><div id="comments"></div></section>
+</article>
+
+<div class="article-rail">
+<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#heading">先把五个角色放到一起</a><a class="level-2" href="#vpn">VPN：关注网络隧道及其访问范围</a><a class="level-2" href="#heading-1">代理：由中间服务代为处理连接</a><a class="level-2" href="#heading-2">机场：是一种订阅与服务组织方式</a><a class="level-2" href="#-tun">系统代理与 TUN，是本地接管方式</a><a class="level-2" href="#-vpn-">手机显示 VPN 图标，意味着什么？</a><a class="level-2" href="#heading-3">按需求选择，比按名字选择更有效</a><a class="level-2" href="#heading-4">常见问题</a><a class="level-3" href="#heading-5">客户端免费，节点也免费吗？</a><a class="level-3" href="#heading-6">全局模式会覆盖每个程序吗？</a><a class="level-3" href="#-vpn--1">使用 VPN 或机场就能完全匿名吗？</a><a class="level-3" href="#heading-7">换客户端能解决所有连接问题吗？</a></nav></aside>
+</div>
+
+</main>
+</div>
+
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" hidden>
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-5 5 5-5 5 5"/></svg>
+</button>
+</div>
+
+<footer class="site-footer">
+
+<span>© © 2026 王牌VPN。原创内容转载请注明来源。</span>
+</footer>
+
+
+
+<dialog id="search-dialog" class="reader-dialog site-search" aria-labelledby="search-title" data-reader-dialog data-pagefind-ignore>
+<header class="reader-dialog-header"><h2 id="search-title">搜索文章</h2><button class="dialog-close" type="button" data-close-dialog aria-label="关闭搜索" title="关闭搜索">×</button></header>
+<div class="reader-dialog-body">
+
+<div id="site-search-ui" data-module="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.js" data-stylesheet="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.css" hidden>
+
+<pagefind-config bundle-path="https://www.wangpaivpn.com/pagefind/" base-url="https://www.wangpaivpn.com/" lang="zh-cn" no-worker></pagefind-config>
+<pagefind-input placeholder="搜索文章标题或正文"></pagefind-input>
+<pagefind-summary></pagefind-summary>
+<pagefind-results></pagefind-results>
+</div>
+<p id="search-status" class="search-status" role="status">正在加载搜索…</p>
+<button id="search-retry" class="button" type="button" hidden>重新加载</button>
+
+</div>
+</dialog>
+
+<script id="blog-comments-config" type="application/json">{"comments":true,"likes":true,"locale":"zh-CN","pageKey":"/p/72ee15c3-fee5-4838-95a8-3e126955155c/","pageTitle":"VPN、代理和机场有什么区别？新手先看懂这三个概念","server":"https://upfqpobmiewm.sealosgzg.site","site":"xblog-a7a10037-229f-47c1-8a18-2d3a50e13cca","views":true,"viewsBase":0}</script>
+
+</body>
+</html>

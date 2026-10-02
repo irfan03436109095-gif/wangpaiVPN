@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="default">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>v2rayNG Android 教程：订阅分组、节点连接与断线排查 · 王牌VPN - 机场推荐与网络指南</title>
+<meta name="description" content="介绍 Android v2rayNG 的官方安装来源、订阅分组更新、节点连接、VPN 权限和网络切换排查，帮助区分订阅地址、单节点分享链接与实际连接状态。">
+<meta name="keywords" content="v2rayNG教程,Android机场客户端,订阅分组,VPN权限">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/">
+<meta property="og:title" content="v2rayNG Android 教程：订阅分组、节点连接与断线排查">
+<meta property="og:description" content="介绍 Android v2rayNG 的官方安装来源、订阅分组更新、节点连接、VPN 权限和网络切换排查，帮助区分订阅地址、单节点分享链接与实际连接状态。">
+<meta property="og:url" content="https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="王牌VPN - 机场推荐与网络指南">
+<meta property="og:locale" content="zh_CN">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v2rayNG Android 教程：订阅分组、节点连接与断线排查">
+<meta name="twitter:description" content="介绍 Android v2rayNG 的官方安装来源、订阅分组更新、节点连接、VPN 权限和网络切换排查，帮助区分订阅地址、单节点分享链接与实际连接状态。">
+
+<meta name="author" content="王牌VPN 编辑部"><meta property="article:published_time" content="2026-10-02T08:00:00&#43;08:00"><meta property="article:modified_time" content="2026-10-02T15:49:27&#43;08:00"><meta property="article:tag" content="机场订阅"><meta property="article:tag" content="v2rayNG"><meta property="article:tag" content="网络隐私"><meta property="article:tag" content="Android">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌VPN 编辑部"},"dateModified":"2026-10-02T15:49:27+08:00","datePublished":"2026-10-02T08:00:00+08:00","description":"介绍 Android v2rayNG 的官方安装来源、订阅分组更新、节点连接、VPN 权限和网络切换排查，帮助区分订阅地址、单节点分享链接与实际连接状态。","headline":"v2rayNG Android 教程：订阅分组、节点连接与断线排查","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/","name":"v2rayNG Android 教程：订阅分组、节点连接与断线排查","position":2}]}]}</script>
+
+<script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
+
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
+<link rel="icon" href="https://www.wangpaivpn.com/assets/theme/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/artalk.css"><script defer src="https://www.wangpaivpn.com/assets/theme/artalk.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/theme.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/reader.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/viewer.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
+
+<script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
+
+
+
+</head>
+
+<body class="article-page">
+
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="https://www.wangpaivpn.com/"><span>王牌VPN - 机场推荐与网络指南</span></a>
+<nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/">首页</a><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></nav>
+<a class="search-toggle" href="https://www.wangpaivpn.com/search/" data-open-dialog="search-dialog" aria-haspopup="dialog" aria-controls="search-dialog" aria-label="搜索" title="搜索"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
+<button id="theme-mode" class="theme-toggle theme-cycle" type="button" aria-label="明暗模式：跟随系统，点击切换为明亮" title="跟随系统 · 点击切换为明亮">
+<svg class="theme-icon-system" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+<svg class="theme-icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
+<svg class="theme-icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+<span id="theme-mode-status" class="visually-hidden" role="status" aria-live="polite"></span>
+<button id="menu-toggle" class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="打开菜单" title="打开菜单">
+<svg class="menu-icon-open" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg class="menu-icon-close" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>
+</button>
+</div>
+</header>
+
+<div class="article-viewport"><div class="article-scroll">
+<main id="main" tabindex="-1" class="shell article-shell" data-has-toc="true">
+
+<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐与网络指南</a></li><li><span aria-current="page">v2rayNG Android 教程：订阅分组、节点连接与断线排查</span></li></ol></nav>
+
+
+
+<article data-pagefind-body>
+<header class="article-header">
+<div class="eyebrow" data-pagefind-ignore>文章</div>
+<h1 data-pagefind-meta="title">v2rayNG Android 教程：订阅分组、节点连接与断线排查</h1>
+<div class="metadata" data-pagefind-ignore><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a></div>
+</header>
+<div class="prose"><p>v2rayNG 是 Android 平台的代理客户端。使用机场订阅时，主要流程是安装适配的版本、建立订阅分组、更新配置、选择节点，再授权系统 VPN 服务并验证实际请求。</p>
+<p>客户端界面会随版本变化。本文按功能名称说明操作，避免把某一个版本的菜单位置写成永久规则。</p>
+<h2 id="heading">一、确认安装来源与设备兼容性</h2>
+<p>从<a href="https://github.com/2dust/v2rayNG">2dust/v2rayNG 官方仓库</a>进入 Releases，选择与你设备架构和系统兼容的发布包。Android 客户端 v2rayNG 与桌面客户端 v2rayN 名称接近，下载时注意区分。</p>
+<p>安装前检查发布包来源，按 Android 提示对本次安装来源授权。安装完成后，可恢复不再需要的安装来源权限。遇到架构或版本不兼容提示，查发布说明，不要安装来历不明的修改版。</p>
+<p>官方仓库还介绍了发布文件的验证方式，可在需要时按项目说明核验文件。<a href="https://github.com/2dust/v2rayNG#download--%E4%B8%8B%E8%BD%BD">v2rayNG 官方下载与验证说明</a></p>
+<h2 id="heading-1">二、分清订阅地址与单节点链接</h2>
+<p>订阅地址通常是服务后台提供的 HTTPS 地址，客户端通过它获取一组配置。单节点分享链接则携带某条节点的信息。两者的导入入口和更新方式可能不同。</p>
+<p>另外，某个客户端专用的 YAML 配置，不一定能被 v2rayNG 按普通订阅解析。优先从服务后台选择明确标注适配 v2rayNG 的入口；若服务方只提供其他格式，先确认支持方式。</p>
+<p>链接中可能包含账户令牌、UUID 或密码，二维码也可能携带同样信息。把它们视为账户凭据，避免公开转发。</p>
+<h2 id="heading-2">三、建立订阅分组并更新</h2>
+<ol>
+<li>打开“订阅”或“订阅分组设置”功能。</li>
+<li>新建一个分组，填写能识别用途的名称和完整 HTTPS 订阅地址。</li>
+<li>保存后，对该分组执行更新订阅操作。</li>
+<li>查看更新结果，确认列表中出现配置项。</li>
+<li>如果列表使用分组筛选，选择刚建立的分组。</li>
+</ol>
+<p>单节点分享信息可根据当前版本提供的“从剪贴板导入”或“扫描二维码”等功能处理。功能名称可在项目维护的<a href="https://raw.githubusercontent.com/2dust/v2rayNG/master/V2rayNG/app/src/main/res/values-zh-rCN/strings.xml">中文界面资源</a>中核对。</p>
+<p>更新失败时，不要先删除唯一可用的旧配置。保留分组与错误内容，检查订阅期限、地址完整性和网络条件，再进行一次有针对性的更新。</p>
+<h2 id="heading-3">四、选择节点并启动连接</h2>
+<p>选择一条配置完整、符合当前用途的节点，使用客户端的启动连接功能。第一次启用时，Android 会显示 VPN 连接请求，确认应用来源和你的使用意图后再接受。</p>
+<p>Android 的官方文档说明，同一个用户或工作资料中只能有一个活动 VPN 服务。另一个 VPN 或使用 VPN 接口的网络工具启动时，可能替换现有服务。<a href="https://developer.android.com/develop/connectivity/vpn">Android VPN 服务说明</a></p>
+<p>因此，出现“刚启动就断开”时，先检查其他 VPN、加速器或使用本地 VPN 的过滤工具是否同时运行。</p>
+<h2 id="-vpn-">五、验证连接，而不是只看 VPN 图标</h2>
+<p>打开一个常用 HTTPS 页面，观察客户端连接状态和日志。系统 VPN 图标表示本地服务活动，不能单独证明远端握手或目标网站访问成功。</p>
+<p>可以依次检查：</p>
+<ul>
+<li>列表中选择的是不是刚才测试的节点。</li>
+<li>客户端是否显示启动失败或认证、握手相关错误。</li>
+<li>常用应用是否被分应用设置排除。</li>
+<li>对应网页是否完成加载，错误是否只出现在单一目标。</li>
+</ul>
+<p>为了便于比较，每次先验证一个应用、一条节点和一个网络。这样能避免“切了三个选项后好像恢复了，却不知道哪个起作用”的情况。</p>
+<h2 id="heading-4">六、手机切换网络或锁屏后断线，怎样排查？</h2>
+<p>先判断本地服务是否还在运行。若服务仍在但连接未恢复，可停止并重新启动一次，比较 Wi-Fi 和蜂窝网络下相同节点的表现，记录切换时间。</p>
+<p>若锁屏后服务被系统停止，则检查手机厂商的后台运行与电池管理设置，只针对这款应用调整必要项目。不要为了保活给它授予与联网无关的敏感权限。</p>
+<p>如果某条节点仅在一种网络失败，继续比较同网络中的其他节点，保留具体错误。协议与路径条件的关系见<a href="/posts/proxy-protocols-comparison/">机场协议比较</a>。</p>
+<h2 id="heading-5">七、常见错误对应哪些环节？</h2>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先做的检查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>没有数据或解码失败</td>
+<td>订阅返回格式、复制内容和目标客户端</td>
+</tr>
+<tr>
+<td>订阅更新失败</td>
+<td>地址、到期情况、网络访问与服务公告</td>
+</tr>
+<tr>
+<td>配置出现但无法启动</td>
+<td>节点参数、当前核心支持和日志</td>
+</tr>
+<tr>
+<td>启动后目标网页失败</td>
+<td>DNS、路由、分应用设置与目标站点</td>
+</tr>
+<tr>
+<td>启动后很快被断开</td>
+<td>同一用户资料中的其他 VPN 服务</td>
+</tr>
+</tbody>
+</table>
+<p>不要通过关闭证书验证、乱改服务器地址或公开订阅链接来尝试修复。更完整的路径见<a href="/posts/airport-connection-troubleshooting/">机场连接故障排查清单</a>。</p>
+<h2 id="heading-6">常见问题</h2>
+<h3 id="heading-7">为什么导入链接后还要更新？</h3>
+<p>订阅分组保存的是获取配置的入口；更新动作才会请求并解析当前节点内容。成功标准应包含配置列表和实际连接。</p>
+<h3 id="heading-8">节点延迟数字正常，就代表全部应用可用吗？</h3>
+<p>不代表。分应用设置、DNS 和路由规则会影响实际请求，还需要在目标应用中验证。</p>
+<h3 id="v2rayng--vpn-">v2rayNG 能让其他 VPN 同时运行吗？</h3>
+<p>Android 对同一用户或资料的活动 VPN 服务有限制。工作资料或厂商功能可能存在额外差异，以系统和组织配置为准，不要假定多个服务会自然叠加。</p>
+<h3 id="heading-9">手机与电脑可以共用订阅吗？</h3>
+<p>先确认服务条款允许的设备和在线范围，再确认分别取得适配客户端的格式。相同账户不意味着所有客户端能读取同一种配置。</p>
+<p>资料核查日期：2026 年 10 月 2 日。本文根据项目与 Android 官方资料整理，具体按钮与支持范围以安装版本为准。</p>
+</div>
+<div class="article-likes" data-pagefind-ignore>
+<button id="page-like" class="like-button" type="button" aria-pressed="false" aria-describedby="page-like-message" disabled>
+<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+<span id="page-like-label">点赞</span><span id="page-like-count">—</span>
+</button><p id="page-like-message" role="status"></p>
+</div>
+<div class="article-tags" data-pagefind-ignore><a href="https://www.wangpaivpn.com/tags/subscription/"># 机场订阅</a><a href="https://www.wangpaivpn.com/tags/v2rayng/"># v2rayNG</a><a href="https://www.wangpaivpn.com/tags/privacy/"># 网络隐私</a><a href="https://www.wangpaivpn.com/tags/android/"># Android</a></div>
+<nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/clash-verge-rev-windows-tutorial/">← 上一篇</a><a href="https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/">下一篇 →</a></nav>
+<section class="comments-section" data-pagefind-ignore><h2>评论</h2><div id="comments"></div></section>
+</article>
+
+<div class="article-rail">
+<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#heading">一、确认安装来源与设备兼容性</a><a class="level-2" href="#heading-1">二、分清订阅地址与单节点链接</a><a class="level-2" href="#heading-2">三、建立订阅分组并更新</a><a class="level-2" href="#heading-3">四、选择节点并启动连接</a><a class="level-2" href="#-vpn-">五、验证连接，而不是只看 VPN 图标</a><a class="level-2" href="#heading-4">六、手机切换网络或锁屏后断线，怎样排查？</a><a class="level-2" href="#heading-5">七、常见错误对应哪些环节？</a><a class="level-2" href="#heading-6">常见问题</a><a class="level-3" href="#heading-7">为什么导入链接后还要更新？</a><a class="level-3" href="#heading-8">节点延迟数字正常，就代表全部应用可用吗？</a><a class="level-3" href="#v2rayng--vpn-">v2rayNG 能让其他 VPN 同时运行吗？</a><a class="level-3" href="#heading-9">手机与电脑可以共用订阅吗？</a></nav></aside>
+</div>
+
+</main>
+</div>
+
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" hidden>
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-5 5 5-5 5 5"/></svg>
+</button>
+</div>
+
+<footer class="site-footer">
+
+<span>© © 2026 王牌VPN。原创内容转载请注明来源。</span>
+</footer>
+
+
+
+<dialog id="search-dialog" class="reader-dialog site-search" aria-labelledby="search-title" data-reader-dialog data-pagefind-ignore>
+<header class="reader-dialog-header"><h2 id="search-title">搜索文章</h2><button class="dialog-close" type="button" data-close-dialog aria-label="关闭搜索" title="关闭搜索">×</button></header>
+<div class="reader-dialog-body">
+
+<div id="site-search-ui" data-module="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.js" data-stylesheet="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.css" hidden>
+
+<pagefind-config bundle-path="https://www.wangpaivpn.com/pagefind/" base-url="https://www.wangpaivpn.com/" lang="zh-cn" no-worker></pagefind-config>
+<pagefind-input placeholder="搜索文章标题或正文"></pagefind-input>
+<pagefind-summary></pagefind-summary>
+<pagefind-results></pagefind-results>
+</div>
+<p id="search-status" class="search-status" role="status">正在加载搜索…</p>
+<button id="search-retry" class="button" type="button" hidden>重新加载</button>
+
+</div>
+</dialog>
+
+<script id="blog-comments-config" type="application/json">{"comments":true,"likes":true,"locale":"zh-CN","pageKey":"/p/29da32d3-bb1c-409e-b152-0f477e06e7d6/","pageTitle":"v2rayNG Android 教程：订阅分组、节点连接与断线排查","server":"https://upfqpobmiewm.sealosgzg.site","site":"xblog-a7a10037-229f-47c1-8a18-2d3a50e13cca","views":true,"viewsBase":0}</script>
+
+</body>
+</html>
