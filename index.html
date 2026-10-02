@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="default">
+<html lang="zh-CN" data-theme="wangpai-select">
 
 <head>
 <meta charset="utf-8">
@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
-
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
 <link rel="icon" href="https://www.wangpaivpn.com/assets/theme/favicon.svg" type="image/svg+xml">
@@ -37,18 +37,17 @@
 <script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
 
 <script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
-
+<script defer src="https://www.wangpaivpn.com/assets/theme/markdown-it.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/purify.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/featured.js"></script>
 
 
 </head>
 
-<body>
-
+<body class="select-site">
 <a class="skip" href="#main">跳到正文</a>
 
 <header class="site-header">
 <div class="header-inner">
-<a class="brand" href="https://www.wangpaivpn.com/"><span>王牌VPN - 机场推荐与网络指南</span></a>
+<a class="brand" href="https://www.wangpaivpn.com/"><img src="https://www.wangpaivpn.com/assets/theme/images/brand-mark.svg" alt="" width="38" height="38"><span>王牌VPN - 机场推荐与网络指南</span></a>
 <nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/" aria-current="page">首页</a><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></nav>
 <a class="search-toggle" href="https://www.wangpaivpn.com/search/" data-open-dialog="search-dialog" aria-haspopup="dialog" aria-controls="search-dialog" aria-label="搜索" title="搜索"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
 <button id="theme-mode" class="theme-toggle theme-cycle" type="button" aria-label="明暗模式：跟随系统，点击切换为明亮" title="跟随系统 · 点击切换为明亮">
@@ -65,100 +64,306 @@
 </header>
 
 
-<main id="main" tabindex="-1" class="shell home-shell">
+<main id="main" tabindex="-1" class="select-shell">
 
 
 
 
-<div class="content-column">
-<h1 class="visually-hidden">王牌VPN - 机场推荐与网络指南</h1>
+  
+    
+<section class="select-intro" aria-labelledby="select-title">
+  <div class="intro-copy">
+    <p class="section-eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> 机场推荐 · 网络指南</p>
+    <h1 id="select-title">好连接，<span>从好选择开始。</span></h1>
+    <p class="intro-description">先了解，再体验。找到适合自己的机场与连接方式。</p>
+  </div>
+  <div class="intro-art" aria-hidden="true">
+    <svg viewBox="0 0 280 150" fill="none">
+      <ellipse cx="142" cy="76" rx="108" ry="48" stroke="currentColor" stroke-opacity=".2" stroke-dasharray="4 5" transform="rotate(-14 142 76)"/>
+      <ellipse cx="142" cy="76" rx="78" ry="34" stroke="currentColor" stroke-opacity=".13" transform="rotate(24 142 76)"/>
+      <path d="M43 105C80 109 89 27 140 58c39 24 59 47 98-15" stroke="currentColor" stroke-width="2"/>
+      <circle cx="44" cy="104" r="6" fill="currentColor"/><circle cx="44" cy="104" r="12" stroke="currentColor" stroke-opacity=".2"/>
+      <circle cx="235" cy="47" r="6" fill="currentColor"/><circle cx="235" cy="47" r="12" stroke="currentColor" stroke-opacity=".2"/>
+      <rect x="121" y="52" width="45" height="45" rx="14" fill="currentColor"/>
+      <path d="m131 66 5 19 8-14 8 14 5-19" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>找到你的连接方式</span>
+  </div>
+</section>
+
+  
+  
+    
+<figure class="site-theme-banner" data-pagefind-ignore aria-label="连接指南横幅">
+  <img class="theme-banner-image" src="https://www.wangpaivpn.com/assets/theme/images/connection-banner.png" alt="" width="2172" height="724" loading="lazy" decoding="async">
+  <figcaption class="theme-banner-copy"><p class="theme-banner-eyebrow">王牌精选 · 连接指南</p><h2>先试用，<span>再决定。</span></h2><p class="theme-banner-description">机场选购、客户端配置与网络知识，从这里出发。</p>
+  <a class="theme-banner-action" href="#first-article">阅读置顶指南 <span aria-hidden="true">↗</span></a>
+  </figcaption>
+</figure>
+
+  
+  
+  
+  <div class="select-columns">
+    <div class="content-column">
+      
+        <div class="section-heading"><h2>最新指南</h2><span>把选择看清，把连接用好</span></div>
+        
+<section class="article-list select-articles" aria-label="文章列表">
+
+  
+  <article class="article-card select-card home-feature" id="first-article" data-pagefind-ignore>
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><span class="pinned">置顶</span></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/">机场推荐：FlyBit 与 99吧邀请入口、免费试用和选购指南</a></h2>
+    
+      <div class="metadata feature-metadata"><span>王牌VPN 编辑部</span><time datetime="2026-10-02T15:40:28&#43;08:00">2026-10-02</time><span class="fulltext-label">全文阅读</span></div>
+      
+      <div class="prose home-feature-body" data-feature-source data-article-url="https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/">寻找**机场推荐**时，先拿到可核对的入口、了解试用条件，再用自己的设备测试，比只看宣传词更容易选到合适的订阅。本文整理 **FlyBit** 与 **99吧** 两个邀请注册入口，介绍官网公开的试用信息，并给出从注册、导入订阅到选择套餐的操作清单。
+
+![机场推荐：FlyBit 与99吧邀请入口、试用指引和选购建议](/assets/media/654433f8-02b4-4bbd-9aec-d2d8ceb42107.png)
+
+## FlyBit 与 99吧：邀请入口与试用信息
+
+| 项目 | FlyBit | 99吧 |
+| --- | --- | --- |
+| 邀请注册入口 | [进入 FlyBit 免费试用](https://goflybit.com/#/register?code=gPinVG8C) | [进入 99吧免费试用](https://99ba.net/#/register?code=sExBbdk9) |
+| 邀请码 | `gPinVG8C` | `sExBbdk9` |
+| 官网导航页展示的试用 | 注册可试用 2G；领取条件以后台为准 | 新用户注册可试用 1G；领取条件以后台为准 |
+| 官网对线路的介绍 | 专线与中转，属于服务方自述 | BGM 专线与中转，属于服务方自述 |
+| 套餐价格与流量 | 注册后查看当前套餐页 | 注册后查看当前套餐页 |
+| 建议的选择方法 | 先用试用额度检查常用场景，再核对套餐 | 先用试用额度检查常用场景，再核对套餐 |
+
+### FlyBit 的月付套餐按流量分为四档，此外，公开套餐图还展示了四档不限时流量包：
+
+| 套餐 | 每月流量 | 月付价格 | | 套餐 | 总流量 | 一次性价格 |
+|---|---:|---:|---|---:|---:|---:|
+| 每月 128G | 128GB | 15 元 | | 不限时 128G | 128GB | 36 元 |
+| 每月 192G | 192GB | 22 元 | | 不限时 256G | 256GB | 68 元 |
+| 每月 256G | 256GB | 28 元 | | 不限时 512G | 512GB | 128 元 |
+| 每月 512G | 512GB | 52 元 | | 不限时 1024G | 1024GB | 238 元 |
 
 
+### 99吧的周期套餐和一次性流量包价格：
+
+| 套餐名称 | 参考价格 | 流量额度 |  | 套餐名称 | 参考一次性价格 | 总流量 |
+|---|---:|---:|---|---|---:|---:|
+| 九九@特惠月套餐 | 9.9 元/月 | 70GB/月 || 九九@星钻SVIP | 35.9 元 | 111GB |
+| 九九@星耀VIP | 12.99 元/月 | 99GB/月 || 九九@至尊SVIP | 69.9 元 | 222GB |
+| 九九@铂金VIP | 24.99 元/月 | 199GB/月 || 九九@皇冠SVIP | 139.99 元 | 555GB |
+| 九九@钻石VIP | 36.99 元/月 | 299GB/月 || 九九@尊耀SVIP | 259.99 元 | 1111GB |
+| 九九@全年特惠套餐 | 99.99 元/年 | 66GB/月 |
 
 
+**快速进入：**[FlyBit 注册入口](https://goflybit.com/#/register?code=gPinVG8C) · [99吧注册入口](https://99ba.net/#/register?code=sExBbdk9)
 
-<section class="article-list" aria-label="文章列表">
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/">机场推荐：FlyBit 与 99吧邀请入口、免费试用和选购指南</a><span class="pinned">置顶</span></h2>
-<p class="card-summary">整理 FlyBit 与 99吧两个邀请注册入口、官网试用信息、套餐核对要点和订阅上手流程，配有官网 Logo、原创封面及流程插图，帮助新手先测试，再按自己的设备与用量选择机场。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T15:40:28&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/" aria-label="阅读机场推荐：FlyBit 与 99吧邀请入口、免费试用和选购指南">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/airport-recommendation-guide/">机场推荐怎么选？订阅套餐、线路与售后评估指南</a><span class="pinned">置顶</span></h2>
-<p class="card-summary">从预算、流量倍率、客户端兼容性、晚高峰表现和售后条款入手，建立可复用的机场推荐评估清单。本文提供评分方法与试用记录表，不编造服务商排名。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/airport-recommendation-guide/" aria-label="阅读机场推荐怎么选？订阅套餐、线路与售后评估指南">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/">VPN、代理和机场有什么区别？新手先看懂这三个概念</a></h2>
-<p class="card-summary">分清 VPN、代理协议、机场订阅和客户端的关系，理解系统代理与 TUN 的区别，并按个人设备或企业办公需求选择合适的连接方式。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/" aria-label="阅读VPN、代理和机场有什么区别？新手先看懂这三个概念">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/proxy-protocols-comparison/">Shadowsocks、Trojan、VLESS 与 Hysteria 2：机场协议怎么选</a></h2>
-<p class="card-summary">从加密方式、传输条件、客户端兼容性和真实线路表现比较四类常见机场协议，解释协议名称为何不能直接等同于速度或安全结论。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/proxy-protocols-comparison/" aria-label="阅读Shadowsocks、Trojan、VLESS 与 Hysteria 2：机场协议怎么选">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/airport-lines-speed-test/">机场线路怎么选？直连、中转、IEPL/IPLC 与晚高峰测速</a></h2>
-<p class="card-summary">看懂机场直连、中转和专线线路的常见说法，结合延迟、抖动、丢包和晚高峰测试记录评估使用体验，避免仅凭节点数量与测速截图购买套餐。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/airport-lines-speed-test/" aria-label="阅读机场线路怎么选？直连、中转、IEPL/IPLC 与晚高峰测速">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/clash-verge-rev-windows-tutorial/">Clash Verge Rev Windows 教程：订阅导入、规则模式与 TUN</a></h2>
-<p class="card-summary">按照官方下载、订阅导入、配置启用、节点选择与连接验证的顺序设置 Clash Verge Rev，理解规则模式、系统代理和 TUN，并处理首次使用中的常见问题。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/clash-verge-rev-windows-tutorial/" aria-label="阅读Clash Verge Rev Windows 教程：订阅导入、规则模式与 TUN">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/">v2rayNG Android 教程：订阅分组、节点连接与断线排查</a></h2>
-<p class="card-summary">介绍 Android v2rayNG 的官方安装来源、订阅分组更新、节点连接、VPN 权限和网络切换排查，帮助区分订阅地址、单节点分享链接与实际连接状态。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/" aria-label="阅读v2rayNG Android 教程：订阅分组、节点连接与断线排查">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/">机场连不上怎么办？订阅失败、节点超时与断网排查清单</a></h2>
-<p class="card-summary">把机场连接失败拆成订阅下载、节点握手、DNS 解析、应用接管和目标站点五个环节，按现象逐步排查，并提供可以直接填写的故障反馈模板。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/" aria-label="阅读机场连不上怎么办？订阅失败、节点超时与断网排查清单">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/dns-fake-ip-routing/">DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页</a></h2>
-<p class="card-summary">解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/dns-fake-ip-routing/" aria-label="阅读DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
-<article class="article-card">
-<span class="card-index" aria-hidden="true"></span>
-<h2><a href="https://www.wangpaivpn.com/posts/sing-box-dns-migration/">行业观察：sing-box DNS 配置迁移为何影响旧机场订阅</a></h2>
-<p class="card-summary">依据 sing-box 官方迁移与弃用文档，解读新 DNS 配置格式对旧机场订阅的影响，区分软件版本、订阅生成器和配置语法，并给出升级前后的验证步骤。</p>
-<div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><a class="card-category" href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a></span><a class="read-more" href="https://www.wangpaivpn.com/posts/sing-box-dns-migration/" aria-label="阅读行业观察：sing-box DNS 配置迁移为何影响旧机场订阅">阅读全文 <span aria-hidden="true">↗</span></a></div>
-</article>
+## FlyBit 机场推荐：从官网试用开始了解
+
+![FlyBit官网使用的Logo：蓝绿交叠图形](/assets/media/8ddb94dd-36df-4c87-ac7d-99e8d9950c99.png)
+
+FlyBit 的官网导航页列出多个访问入口，并展示注册试用信息。对刚接触机场订阅的读者，可以先进入邀请链接，查看注册后的套餐、帮助文档和可用线路，再决定是否购买。
+
+**建议按这个顺序查看：**
+
+1. 通过 [FlyBit 邀请入口](https://goflybit.com/#/register?code=gPinVG8C) 访问。如果先打开网址导航页，选择页面列出的推荐入口继续。
+2. 到达注册页后，核对邀请码 `gPinVG8C` 是否保留；若页面提供输入框，可再次确认。完成注册前阅读服务条款。
+3. 在用户后台确认试用是否发放，以及有效期、额度和节点使用范围。试用可能有条件，不能只凭导航页文案判断。
+4. 查看套餐的流量重置周期、倍率、同时在线设备限制、退款规则和客服入口，随后测试日常使用场景。
+
+如果后台仍提供导航页所述的试用，先完成测试会让选购更有依据。试用期间能够连接，只能说明当时的节点与网络可用；长期表现还需要在不同日期和时段观察。
+
+[前往 FlyBit 邀请入口 →](https://goflybit.com/#/register?code=gPinVG8C)
+
+## 99吧机场推荐：核对套餐规则，再选择订阅
+
+![99吧官网导航使用的Logo：蓝色底白色N图标](/assets/media/85effcf9-8e03-4d5a-ba68-3d9fe232f0f0.jpg)
+
+99吧的官网导航页展示新用户试用信息，并列出推荐入口。对希望先了解机场服务、再控制购买预算的读者，这提供了一个查看后台规则和试用情况的起点。
+
+**注册与选购时重点确认：**
+
+- 通过 [99吧邀请入口](https://99ba.net/#/register?code=sExBbdk9) 进入，并核对邀请码 `sExBbdk9`。若先到导航页，沿官网列出的入口继续访问。
+- 确认试用是否需要额外领取、何时到期，以及哪些节点可以使用。
+- 价格之外，同时查看流量额度、节点倍率、设备数量、订阅有效期和售后规则。低标价并不必然意味着相同用量下的总成本更低。
+- 在自己的宽带与移动网络上分别测试，观察常用网站、视频通话和文件下载是否满足需求。
+
+官网中的“BGM 专线”属于服务方线路名称；仅凭名称无法确认传输路径、带宽保障或线路级别。选购时以后台说明、实际使用表现和明确的服务条款为依据。
+
+[前往 99吧邀请入口 →](https://99ba.net/#/register?code=sExBbdk9)
+
+## 两个机场怎么选？先看这五项
+
+两家都可以作为进一步了解的候选。当前公开资料不足以支持“哪家一定更快、更稳”的结论，建议把选择过程变成一次小规模的实际检查。
+
+| 检查项 | 需要确认什么 | 实用做法 |
+| --- | --- | --- |
+| 常用场景 | 阅读、远程协作、视频会议或下载能否正常完成 | 用平时会用的服务测试，记录连接成功与卡顿情况 |
+| 时间与网络 | 晚间、工作时段，以及宽带和移动数据下表现如何 | 在相近时段测试两个候选，避免拿不同环境的结果直接比较 |
+| 流量规则 | 流量重置日期、倍率和到期方式是否清楚 | 先看规则再测大文件，测速也会消耗额度 |
+| 客户端兼容 | 后台提供的订阅格式与自己的客户端是否匹配 | 按服务方文档选择格式，先确认设备与协议支持 |
+| 售后与续费 | 客服入口、退款条件和续费价格是否明确 | 下单前阅读条款，保留套餐说明和订单记录 |
+
+想进一步理解线路与测速，可以阅读本站的 [机场线路选择与晚高峰测速指南](/posts/airport-lines-speed-test/)；需要完整的选择框架，可以阅读 [机场推荐怎么选：套餐、线路与售后评估](/posts/airport-recommendation-guide/)。
+
+**可执行的选择建议：**有试用就先试用；通过日常场景测试后，优先考虑适合当前需求的短周期或小额度方案。确认流量消耗与售后体验后，再评估是否续费或增加额度。暂时用不完的长期套餐，不必仅因单月折算价格较低而购买。
+
+## 从邀请注册到导入订阅：新手上手流程
+
+![机场订阅上手流程：确认邀请码、导入订阅、测试场景、按需选购](/assets/media/e45ee2e1-0118-4fa5-982a-5c0ebd192bd2.png)
+
+### 第一步：确认邀请码与账户规则
+
+保留本文完整邀请链接中的 `#/register?code=` 部分。若中途经过导航页或跳转，抵达注册页后再次核对邀请码。
+
+注册时使用自己能够接收通知的邮箱，并设置独立密码。是否同意条款、是否付费，由读者在了解规则后自行决定。
+
+### 第二步：按设备选择客户端与订阅格式
+
+登录后台后，查看服务方提供的客户端教程和订阅格式。常见的 Windows 与 Android 客户端示例分别是 Clash Verge Rev 和 v2rayNG，但能否使用，要看服务方提供的协议及配置格式是否兼容。
+
+可结合本站教程操作：
+
+- [Clash Verge Rev Windows：订阅导入、规则模式与 TUN](/posts/clash-verge-rev-windows-tutorial/)
+- [v2rayNG Android：订阅分组、节点连接与断线排查](/posts/v2rayng-android-tutorial/)
+
+订阅地址可能包含账户令牌，应像密码一样保管。不要把完整订阅链接发到公开群聊、评论区或来源不明的在线转换工具。
+
+### 第三步：连接后先测小场景
+
+成功导入并不等于所有应用已经按预期联网。先检查常用网页、远程协作工具和视频通话，再视需求测试较大的下载。观察断线、超时和规则分流情况，并记录测试时段及网络环境。
+
+若连接失败，先区分订阅无法导入、节点超时和应用无法打开，参考 [机场连不上排查清单](/posts/airport-connection-troubleshooting/)。不要在原因不明时频繁重装或随意修改所有设置。
+
+### 第四步：核对订单后按需选购
+
+确认套餐名称、支付金额、有效期、流量规则、设备限制与退款条件，再决定是否下单。支付成功后检查后台到账状态；遇到异常时，优先通过官网列出的客服渠道处理。
+
+
+## 选择入口，先核对试用与套餐
+
+准备了解这两个机场时，可从以下邀请入口开始，先查看账户内实际权益，再测试自己的常用场景：
+
+- **[FlyBit 邀请注册入口 →](https://goflybit.com/#/register?code=gPinVG8C)**，邀请码 `gPinVG8C`。
+- **[99吧邀请注册入口 →](https://99ba.net/#/register?code=sExBbdk9)**，邀请码 `sExBbdk9`。
+
+</div>
+      <div class="card-footer feature-footer"><span>继续探索更多连接指南</span><a class="read-more" href="https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/" aria-label="打开机场推荐：FlyBit 与 99吧邀请入口、免费试用和选购指南的文章详情">打开文章详情 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><span class="pinned">置顶</span></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/airport-recommendation-guide/">机场推荐怎么选？订阅套餐、线路与售后评估指南</a></h2>
+    
+      <p class="card-summary">从预算、流量倍率、客户端兼容性、晚高峰表现和售后条款入手，建立可复用的机场推荐评估清单。本文提供评分方法与试用记录表，不编造服务商排名。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/airport-recommendation-guide/" aria-label="阅读机场推荐怎么选？订阅套餐、线路与售后评估指南">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/">VPN、代理和机场有什么区别？新手先看懂这三个概念</a></h2>
+    
+      <p class="card-summary">分清 VPN、代理协议、机场订阅和客户端的关系，理解系统代理与 TUN 的区别，并按个人设备或企业办公需求选择合适的连接方式。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/" aria-label="阅读VPN、代理和机场有什么区别？新手先看懂这三个概念">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/proxy-protocols-comparison/">Shadowsocks、Trojan、VLESS 与 Hysteria 2：机场协议怎么选</a></h2>
+    
+      <p class="card-summary">从加密方式、传输条件、客户端兼容性和真实线路表现比较四类常见机场协议，解释协议名称为何不能直接等同于速度或安全结论。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/proxy-protocols-comparison/" aria-label="阅读Shadowsocks、Trojan、VLESS 与 Hysteria 2：机场协议怎么选">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/airport-lines-speed-test/">机场线路怎么选？直连、中转、IEPL/IPLC 与晚高峰测速</a></h2>
+    
+      <p class="card-summary">看懂机场直连、中转和专线线路的常见说法，结合延迟、抖动、丢包和晚高峰测试记录评估使用体验，避免仅凭节点数量与测速截图购买套餐。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/airport-lines-speed-test/" aria-label="阅读机场线路怎么选？直连、中转、IEPL/IPLC 与晚高峰测速">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/clash-verge-rev-windows-tutorial/">Clash Verge Rev Windows 教程：订阅导入、规则模式与 TUN</a></h2>
+    
+      <p class="card-summary">按照官方下载、订阅导入、配置启用、节点选择与连接验证的顺序设置 Clash Verge Rev，理解规则模式、系统代理和 TUN，并处理首次使用中的常见问题。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/clash-verge-rev-windows-tutorial/" aria-label="阅读Clash Verge Rev Windows 教程：订阅导入、规则模式与 TUN">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/">v2rayNG Android 教程：订阅分组、节点连接与断线排查</a></h2>
+    
+      <p class="card-summary">介绍 Android v2rayNG 的官方安装来源、订阅分组更新、节点连接、VPN 权限和网络切换排查，帮助区分订阅地址、单节点分享链接与实际连接状态。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/v2rayng-android-tutorial/" aria-label="阅读v2rayNG Android 教程：订阅分组、节点连接与断线排查">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/">机场连不上怎么办？订阅失败、节点超时与断网排查清单</a></h2>
+    
+      <p class="card-summary">把机场连接失败拆成订阅下载、节点握手、DNS 解析、应用接管和目标站点五个环节，按现象逐步排查，并提供可以直接填写的故障反馈模板。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/" aria-label="阅读机场连不上怎么办？订阅失败、节点超时与断网排查清单">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/dns-fake-ip-routing/">DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页</a></h2>
+    
+      <p class="card-summary">解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/dns-fake-ip-routing/" aria-label="阅读DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
+
+  
+  <article class="article-card select-card">
+    <div class="card-overline"><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a></div>
+    <h2><a href="https://www.wangpaivpn.com/posts/sing-box-dns-migration/">行业观察：sing-box DNS 配置迁移为何影响旧机场订阅</a></h2>
+    
+      <p class="card-summary">依据 sing-box 官方迁移与弃用文档，解读新 DNS 配置格式对旧机场订阅的影响，区分软件版本、订阅生成器和配置语法，并给出升级前后的验证步骤。</p>
+      <div class="card-footer"><span><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time></span><a class="read-more" href="https://www.wangpaivpn.com/posts/sing-box-dns-migration/" aria-label="阅读行业观察：sing-box DNS 配置迁移为何影响旧机场订阅">阅读全文 <span aria-hidden="true">↗</span></a></div>
+    
+  </article>
 
 </section>
 
-
+        
 <nav class="pagination" aria-label="分页"><span></span><span>1 / 2</span><a href="https://www.wangpaivpn.com/page/2/">下一页 →</a></nav>
 
-
-</div>
-<div class="home-rail"><aside class="home-sidebar" aria-label="分类和标签">
-
+      
+    </div>
+    
+      <div class="select-rail home-rail">
+        <aside class="home-sidebar" aria-label="分类和标签">
 <section class="sidebar-section"><h2>分类</h2><nav class="category-list" aria-label="文章分类"><a href="https://www.wangpaivpn.com/categories/airport-recommendation/"><span>机场推荐</span><span class="taxonomy-count" aria-label="3 篇文章">3</span></a><a href="https://www.wangpaivpn.com/categories/protocols-network/"><span>协议与网络</span><span class="taxonomy-count" aria-label="3 篇文章">3</span></a><a href="https://www.wangpaivpn.com/categories/client-tutorials/"><span>客户端教程</span><span class="taxonomy-count" aria-label="2 篇文章">2</span></a><a href="https://www.wangpaivpn.com/categories/troubleshooting/"><span>常见问题</span><span class="taxonomy-count" aria-label="1 篇文章">1</span></a><a href="https://www.wangpaivpn.com/categories/industry-insights/"><span>行业观察</span><span class="taxonomy-count" aria-label="1 篇文章">1</span></a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/"><span>合规与隐私</span><span class="taxonomy-count" aria-label="1 篇文章">1</span></a></nav></section>
 <section class="sidebar-section"><h2>标签</h2><nav class="tag-list" aria-label="文章标签"><a href="https://www.wangpaivpn.com/tags/airport-recommendation/"><span class="tag-hash" aria-hidden="true">#</span> 机场推荐<span class="tag-count" aria-label="5 篇文章">5</span></a><a href="https://www.wangpaivpn.com/tags/subscription/"><span class="tag-hash" aria-hidden="true">#</span> 机场订阅<span class="tag-count" aria-label="7 篇文章">7</span></a><a href="https://www.wangpaivpn.com/tags/proxy-protocols/"><span class="tag-hash" aria-hidden="true">#</span> 代理协议<span class="tag-count" aria-label="3 篇文章">3</span></a><a href="https://www.wangpaivpn.com/tags/speed-test/"><span class="tag-hash" aria-hidden="true">#</span> 线路测速<span class="tag-count" aria-label="3 篇文章">3</span></a><a href="https://www.wangpaivpn.com/tags/clash-verge-rev/"><span class="tag-hash" aria-hidden="true">#</span> Clash Verge Rev<span class="tag-count" aria-label="2 篇文章">2</span></a><a href="https://www.wangpaivpn.com/tags/v2rayng/"><span class="tag-hash" aria-hidden="true">#</span> v2rayNG<span class="tag-count" aria-label="2 篇文章">2</span></a><a href="https://www.wangpaivpn.com/tags/dns/"><span class="tag-hash" aria-hidden="true">#</span> DNS<span class="tag-count" aria-label="3 篇文章">3</span></a><a href="https://www.wangpaivpn.com/tags/tun/"><span class="tag-hash" aria-hidden="true">#</span> TUN<span class="tag-count" aria-label="4 篇文章">4</span></a><a href="https://www.wangpaivpn.com/tags/privacy/"><span class="tag-hash" aria-hidden="true">#</span> 网络隐私<span class="tag-count" aria-label="6 篇文章">6</span></a><a href="https://www.wangpaivpn.com/tags/sing-box/"><span class="tag-hash" aria-hidden="true">#</span> sing-box<span class="tag-count" aria-label="2 篇文章">2</span></a><a href="https://www.wangpaivpn.com/tags/windows/"><span class="tag-hash" aria-hidden="true">#</span> Windows<span class="tag-count" aria-label="1 篇文章">1</span></a><a href="https://www.wangpaivpn.com/tags/android/"><span class="tag-hash" aria-hidden="true">#</span> Android<span class="tag-count" aria-label="1 篇文章">1</span></a></nav></section>
-
-</aside></div>
+</aside>
+        
+      </div>
+    
+  </div>
 
 </main>
 
 
 <footer class="site-footer">
-
-<span>© © 2026 王牌VPN。原创内容转载请注明来源。</span>
+  
+  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span>了解 · 体验 · 选择</span></div>
 </footer>
 
 
