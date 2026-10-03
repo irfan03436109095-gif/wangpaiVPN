@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="wangpai-select">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级 · 王牌VPN - 机场推荐与网络指南</title>
+<meta name="description" content="机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。">
+<meta name="keywords" content="机场推荐,Firefox,HTTPS-Only,安全站点不可用,浏览器排障">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/">
+<meta property="og:title" content="节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级">
+<meta property="og:description" content="机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。">
+<meta property="og:url" content="https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="王牌VPN - 机场推荐与网络指南">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png"><meta property="og:image:alt" content="王牌VPN - 机场推荐与网络指南">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级">
+<meta name="twitter:description" content="机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。">
+<meta name="twitter:image" content="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png">
+<meta name="author" content="王牌飞行员"><meta property="article:published_time" content="2026-10-03T14:10:18&#43;08:00"><meta property="article:modified_time" content="2026-10-03T14:10:25&#43;08:00"><meta property="article:tag" content="网络隐私"><meta property="article:tag" content="Windows">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌飞行员"},"dateModified":"2026-10-03T14:10:25+08:00","datePublished":"2026-10-03T14:10:18+08:00","description":"机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。","headline":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/","name":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","position":2}]}]}</script>
+
+<script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
+<link rel="icon" href="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/artalk.css"><script defer src="https://www.wangpaivpn.com/assets/theme/artalk.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/theme.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/reader.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/viewer.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
+
+<script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/markdown-it.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/purify.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/featured.js"></script>
+
+
+</head>
+
+<body class="select-site article-page">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="https://www.wangpaivpn.com/"><img src="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png" alt="" width="38" height="38"><span>王牌VPN - 机场推荐与网络指南</span></a>
+<nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/">首页</a><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></nav>
+<a class="search-toggle" href="https://www.wangpaivpn.com/search/" data-open-dialog="search-dialog" aria-haspopup="dialog" aria-controls="search-dialog" aria-label="搜索" title="搜索"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
+<button id="theme-mode" class="theme-toggle theme-cycle" type="button" aria-label="明暗模式：跟随系统，点击切换为明亮" title="跟随系统 · 点击切换为明亮">
+<svg class="theme-icon-system" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+<svg class="theme-icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
+<svg class="theme-icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+<span id="theme-mode-status" class="visually-hidden" role="status" aria-live="polite"></span>
+<button id="menu-toggle" class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="打开菜单" title="打开菜单">
+<svg class="menu-icon-open" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg class="menu-icon-close" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>
+</button>
+</div>
+</header>
+
+<div class="article-viewport"><div class="article-scroll">
+<main id="main" tabindex="-1" class="select-shell select-reading">
+
+<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐与网络指南</a></li><li><span aria-current="page">节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级</span></li></ol></nav>
+
+
+  <div class="select-columns reading-columns">
+    <div class="reading-content">
+<article data-pagefind-body>
+<header class="article-header">
+<div class="eyebrow" data-pagefind-ignore>王牌指南</div>
+<h1 data-pagefind-meta="title">节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级</h1>
+<div class="metadata" data-pagefind-ignore><span>王牌飞行员</span><time datetime="2026-10-03T14:10:18&#43;08:00">2026-10-03</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a></div>
+</header>
+<div class="prose"><p>节点延迟正常，其他网页也能打开，只有一个链接在 Firefox 里提示“安全站点不可用”，此时先记录浏览器的完整提示。Firefox 的 HTTPS-Only 模式会尝试把 HTTP 地址升级成 HTTPS；目标没有可用的 HTTPS 服务时，浏览器可能在进入网页前阻止继续访问。</p>
+<p>本文针对桌面版 Firefox 的这类提示，给出一套保持节点不变的检查流程。它也适合在参考机场推荐、试用客户端时使用：把浏览器的安全限制和线路连接结果分别记录，才能判断问题究竟发生在哪一步。</p>
+<h2 id="heading">先保存失败现场</h2>
+<p>不要立即连换多个节点。先记录四项信息：</p>
+<ol>
+<li>原始链接的协议、域名和路径，例如 <code>http://example.com/help</code>；分享记录时删除登录令牌、邀请码以外的私人参数和其他敏感信息。</li>
+<li>点击后地址栏实际显示的是 HTTP 还是 HTTPS。</li>
+<li>页面完整提示：是“安全站点不可用”、证书警告，还是连接超时。</li>
+<li>同一节点下，自己常用的两个 HTTPS 页面能否正常打开。</li>
+</ol>
+<p>这里只用自己有权访问的网页作比较。两个正常页面说明当前路径具有部分可用性，不能据此证明所有目标都可达；一个页面失败，也不足以判定机场整体故障。</p>
+<h2 id="heading-1">检查自动升级设置</h2>
+<p>打开 Firefox 菜单中的“设置”，进入“隐私与安全”，查找 HTTPS-Only 模式。不同界面的选项位置可能不同，新界面可能放在连接安全的高级设置中；以当前浏览器和 <a href="https://support.mozilla.org/en-US/kb/https-only-prefs">Mozilla 官方说明</a> 为准。</p>
+<p>记录该选项是覆盖所有窗口、仅隐私窗口，还是未启用。排查时使用同一个窗口，避免普通窗口和隐私窗口的条件不同。</p>
+<p>若原始地址是 HTTP，浏览器实际尝试访问 HTTPS，并显示安全站点不可用，可以提出一个待核验的判断：升级后的目标连接没有成功。继续核对该网站是否提供 HTTPS，暂时不要把这一现象直接归因于节点速度。</p>
+<h2 id="-firefox-">确认 Firefox 实际使用的代理路径</h2>
+<p>保持节点和网络不变，在 Firefox 设置中找到“网络设置”，打开连接设置，记下当前使用的是系统代理、手动代理、自动配置，还是其他选项。Mozilla 的 <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox">连接设置文档</a> 说明了这些连接方式。</p>
+<p>如果客户端开启了系统代理，但 Firefox 配置为另一条手动代理路径，就要先确认那条路径的地址和端口。不要同时修改 HTTPS 设置、代理模式和节点，否则恢复后很难判断是哪项改变起作用。</p>
+<p>建议先保留现状，只记录。确需调整时，一次只改一项，并保留原设置以便恢复。</p>
+<h2 id="heading-2">按错误类型决定下一步</h2>
+<table>
+<thead>
+<tr>
+<th>观察结果</th>
+<th>下一项检查</th>
+<th>可以得出的结论范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP 链接被升级，出现安全站点不可用</td>
+<td>核对网站是否有正式 HTTPS 入口</td>
+<td>当前升级尝试没有成功</td>
+</tr>
+<tr>
+<td>手动打开正式 HTTPS 入口后出现证书警告</td>
+<td>保存错误代码，检查时间与网站证书信息</td>
+<td>需要处理安全连接问题，不能用速度解释</td>
+</tr>
+<tr>
+<td>HTTPS 页面连接超时，其他 HTTPS 页面正常</td>
+<td>核对目标、路径和节点，交替重复访问</td>
+<td>故障可能与该目标或当前路径有关</td>
+</tr>
+<tr>
+<td>多个常用页面都失败</td>
+<td>返回客户端，检查本地代理和节点连接</td>
+<td>问题范围已扩大，需要逐层排查</td>
+</tr>
+</tbody>
+</table>
+<p>Mozilla 的 <a href="https://support.mozilla.org/en-US/kb/what-does-your-connection-is-not-secure-mean">安全警告代码说明</a> 可帮助识别证书类错误。证书警告应保留原代码，不要通过忽略证书验证来制作“恢复正常”的结果。</p>
+<h2 id="-http-">只为明确可信的 HTTP 页面考虑临时例外</h2>
+<p>如果网站运营方明确只提供 HTTP，而你只是读取不敏感的公开内容，可以自行决定是否接受明文连接风险。优先寻找正式 HTTPS 入口，或返回上一页。</p>
+<p>确需比较时，Firefox 支持针对当前站点临时放行 HTTP。只处理这个目标，并在记录中注明本次使用了 HTTP。测试结束后撤回不再需要的例外。登录、支付、提交订阅链接等操作应使用可正常验证的 HTTPS 页面。</p>
+<p>这个对照的目的，是判断失败是否发生在 HTTPS 升级环节。HTTP 放行后能打开，不代表该网站的 HTTPS 已恢复，也不代表代理连接通过了所有验收。</p>
+<h2 id="heading-3">怎样算完成排障</h2>
+<p>在相同窗口、网络和节点下，重新访问原始链接两次，并记录最终协议和页面提示。验收记录至少应能回答：</p>
+<ul>
+<li>当前使用的正式入口是什么，最终是否为 HTTPS？</li>
+<li>Firefox 的代理路径是否与预期一致？</li>
+<li>是否仍有安全警告或临时例外？</li>
+<li>两个对照页面与原故障页面各自的结果是什么？</li>
+</ul>
+<p>如果最终仍只能通过 HTTP 查看公开页面，记录为“HTTP 入口可用，HTTPS 问题未解决”。如果正式 HTTPS 入口可以重复打开、证书验证正常，且原先的临时例外已清理，再记录为“该入口已恢复”。这类具体记录比单独填写“节点正常”更适合复查和向网站维护者反馈。</p>
+<h2 id="heading-4">官方资料与核验日期</h2>
+<p>资料核验日期：2026 年 10 月 3 日。本文提供排查方法，没有虚构特定机场或网站的实际测试结果。</p>
+<ul>
+<li><a href="https://support.mozilla.org/en-US/kb/https-only-prefs">Mozilla：Firefox 的 HTTPS-Only 模式</a></li>
+<li><a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox">Mozilla：Firefox 的连接设置</a></li>
+<li><a href="https://support.mozilla.org/en-US/kb/what-does-your-connection-is-not-secure-mean">Mozilla：安全警告代码说明</a></li>
+</ul>
+</div>
+<div class="article-likes" data-pagefind-ignore>
+<button id="page-like" class="like-button" type="button" aria-pressed="false" aria-describedby="page-like-message" disabled>
+<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+<span id="page-like-label">点赞</span><span id="page-like-count">—</span>
+</button><p id="page-like-message" role="status"></p>
+</div>
+<div class="article-tags" data-pagefind-ignore><a href="https://www.wangpaivpn.com/tags/privacy/"># 网络隐私</a><a href="https://www.wangpaivpn.com/tags/windows/"># Windows</a></div>
+<nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/vpn-compliance-privacy/">← 上一篇</a></nav>
+<section class="comments-section" data-pagefind-ignore><h2>评论</h2><div id="comments"></div></section>
+</article>
+</div>
+    <div class="select-rail article-rail">
+<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#heading">先保存失败现场</a><a class="level-2" href="#heading-1">检查自动升级设置</a><a class="level-2" href="#-firefox-">确认 Firefox 实际使用的代理路径</a><a class="level-2" href="#heading-2">按错误类型决定下一步</a><a class="level-2" href="#-http-">只为明确可信的 HTTP 页面考虑临时例外</a><a class="level-2" href="#heading-3">怎样算完成排障</a><a class="level-2" href="#heading-4">官方资料与核验日期</a></nav></aside>
+</div>
+  </div>
+
+</main>
+</div>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" hidden>
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-5 5 5-5 5 5"/></svg>
+</button>
+</div>
+
+<footer class="site-footer">
+  
+  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span>了解 · 体验 · 选择</span></div>
+</footer>
+
+
+
+<dialog id="search-dialog" class="reader-dialog site-search" aria-labelledby="search-title" data-reader-dialog data-pagefind-ignore>
+<header class="reader-dialog-header"><h2 id="search-title">搜索文章</h2><button class="dialog-close" type="button" data-close-dialog aria-label="关闭搜索" title="关闭搜索">×</button></header>
+<div class="reader-dialog-body">
+
+<div id="site-search-ui" data-module="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.js" data-stylesheet="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.css" hidden>
+
+<pagefind-config bundle-path="https://www.wangpaivpn.com/pagefind/" base-url="https://www.wangpaivpn.com/" lang="zh-cn" no-worker></pagefind-config>
+<pagefind-input placeholder="搜索文章标题或正文"></pagefind-input>
+<pagefind-summary></pagefind-summary>
+<pagefind-results></pagefind-results>
+</div>
+<p id="search-status" class="search-status" role="status">正在加载搜索…</p>
+<button id="search-retry" class="button" type="button" hidden>重新加载</button>
+
+</div>
+</dialog>
+
+<script id="blog-comments-config" type="application/json">{"comments":true,"likes":true,"locale":"zh-CN","pageKey":"/p/9d8bea99-a7d9-497f-b59c-3ea7ceecf919/","pageTitle":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","server":"https://upfqpobmiewm.sealosgzg.site","site":"xblog-a7a10037-229f-47c1-8a18-2d3a50e13cca","views":true,"viewsBase":0}</script>
+
+</body>
+</html>

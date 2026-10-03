@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.wangpaivpn.com/</loc>
-    <lastmod>2026-10-02T18:37:05Z</lastmod>
+    <lastmod>2026-10-03T06:22:38Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/categories/airport-recommendation/</loc>
@@ -26,11 +26,11 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/categories/troubleshooting/</loc>
-    <lastmod>2026-10-02T18:37:05Z</lastmod>
+    <lastmod>2026-10-03T06:22:38Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/page/2/</loc>
-    <lastmod>2026-10-02T18:37:05Z</lastmod>
+    <lastmod>2026-10-03T06:22:38Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/</loc>
@@ -53,6 +53,10 @@
     <lastmod>2026-10-02T18:37:05Z</lastmod>
   </url>
   <url>
+    <loc>https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/</loc>
+    <lastmod>2026-10-03T06:10:25Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/</loc>
     <lastmod>2026-10-02T18:37:05Z</lastmod>
   </url>
@@ -70,7 +74,7 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/vpn-compliance-privacy/</loc>
-    <lastmod>2026-10-02T18:37:05Z</lastmod>
+    <lastmod>2026-10-03T06:22:38Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/</loc>
@@ -94,7 +98,7 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/privacy/</loc>
-    <lastmod>2026-10-02T18:37:05Z</lastmod>
+    <lastmod>2026-10-03T06:22:38Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/proxy-protocols/</loc>
@@ -122,6 +126,6 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/windows/</loc>
-    <lastmod>2026-10-02T18:37:05Z</lastmod>
+    <lastmod>2026-10-03T06:22:38Z</lastmod>
   </url>
 </urlset>
