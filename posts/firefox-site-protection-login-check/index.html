@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="wangpai-select">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护 · 王牌VPN - 机场推荐与网络指南</title>
+<meta name="description" content="先检查 Firefox 盾牌记录，再在可信网站做一次单站例外对照并恢复保护，区分第三方资源受阻、代理连接和账号本身的问题。">
+<meta name="keywords" content="机场推荐,Firefox登录排障,增强型跟踪保护,浏览器隐私,单站例外">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/firefox-site-protection-login-check/">
+<meta property="og:title" content="网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护">
+<meta property="og:description" content="先检查 Firefox 盾牌记录，再在可信网站做一次单站例外对照并恢复保护，区分第三方资源受阻、代理连接和账号本身的问题。">
+<meta property="og:url" content="https://www.wangpaivpn.com/posts/firefox-site-protection-login-check/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="王牌VPN - 机场推荐与网络指南">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png"><meta property="og:image:alt" content="王牌VPN - 机场推荐与网络指南">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护">
+<meta name="twitter:description" content="先检查 Firefox 盾牌记录，再在可信网站做一次单站例外对照并恢复保护，区分第三方资源受阻、代理连接和账号本身的问题。">
+<meta name="twitter:image" content="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png">
+<meta name="author" content="王牌飞行员"><meta property="article:published_time" content="2026-10-04T09:50:08&#43;08:00"><meta property="article:modified_time" content="2026-10-04T09:50:11&#43;08:00"><meta property="article:tag" content="机场推荐"><meta property="article:tag" content="网络隐私">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/firefox-site-protection-login-check/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌飞行员"},"dateModified":"2026-10-04T09:50:11+08:00","datePublished":"2026-10-04T09:50:08+08:00","description":"先检查 Firefox 盾牌记录，再在可信网站做一次单站例外对照并恢复保护，区分第三方资源受阻、代理连接和账号本身的问题。","headline":"网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/firefox-site-protection-login-check/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/firefox-site-protection-login-check/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/firefox-site-protection-login-check/","name":"网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护","position":2}]}]}</script>
+
+<script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
+<link rel="icon" href="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/artalk.css"><script defer src="https://www.wangpaivpn.com/assets/theme/artalk.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/theme.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/reader.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/viewer.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
+
+<script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/markdown-it.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/purify.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/featured.js"></script>
+
+
+</head>
+
+<body class="select-site article-page">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="https://www.wangpaivpn.com/"><img src="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png" alt="" width="38" height="38"><span>王牌VPN - 机场推荐与网络指南</span></a>
+<nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/">首页</a><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></nav>
+<a class="search-toggle" href="https://www.wangpaivpn.com/search/" data-open-dialog="search-dialog" aria-haspopup="dialog" aria-controls="search-dialog" aria-label="搜索" title="搜索"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
+<button id="theme-mode" class="theme-toggle theme-cycle" type="button" aria-label="明暗模式：跟随系统，点击切换为明亮" title="跟随系统 · 点击切换为明亮">
+<svg class="theme-icon-system" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+<svg class="theme-icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
+<svg class="theme-icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+<span id="theme-mode-status" class="visually-hidden" role="status" aria-live="polite"></span>
+<button id="menu-toggle" class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="打开菜单" title="打开菜单">
+<svg class="menu-icon-open" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+<svg class="menu-icon-close" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>
+</button>
+</div>
+</header>
+
+<div class="article-viewport"><div class="article-scroll">
+<main id="main" tabindex="-1" class="select-shell select-reading">
+
+<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐与网络指南</a></li><li><span aria-current="page">网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护</span></li></ol></nav>
+
+
+  <div class="select-columns reading-columns">
+    <div class="reading-content">
+<article data-pagefind-body>
+<header class="article-header">
+<div class="eyebrow" data-pagefind-ignore>王牌指南</div>
+<h1 data-pagefind-meta="title">网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护</h1>
+<div class="metadata" data-pagefind-ignore><span>王牌飞行员</span><time datetime="2026-10-04T09:50:08&#43;08:00">2026-10-04</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a></div>
+</header>
+<div class="prose"><p>网页文字都能显示，登录按钮却无反应，原因可能在脚本、第三方登录资源、浏览器保护或账号服务。换节点之前，先观察 Firefox 在当前站点阻止了什么，能避免把网页层的问题误判成机场故障。</p>
+<p><img src="https://www.wangpaivpn.com/assets/media/26734a37-4c68-4727-8ba5-184765b35f7e.png" alt="页面主内容已经加载，但第三方登录资源需要检查浏览器保护记录"></p>
+<p><em>示意图：先观察被阻止的资源，再做可恢复的单站对照，不把按钮失效直接归因于节点。</em></p>
+<h2 id="heading">这条路径适用于哪类问题</h2>
+<p>适用于桌面 Firefox 中，主页面能打开、部分表单或嵌入内容失效，而其他网络任务正常的情况。如果整个域名解析失败或证书报错，先处理连接与证书，这项检查不能修复它们。</p>
+<p>Mozilla 官方说明，增强型跟踪保护可能影响含跟踪资源的登录、表单或其他嵌入内容。这是排障线索，不意味着每次按钮故障都是保护造成的。</p>
+<h2 id="heading-1">先读取盾牌记录</h2>
+<p>进入确认可信的原网站，点击地址栏附近的盾牌，查看当前保护状态及被阻止的内容。界面可能随版本变化，按实际展示找到记录，不依据图标动画或颜色猜测。保存错误时间、受影响功能和资源域名，遮住账号与个人信息。</p>
+<p>如果没有相应阻止记录，仍可能有扩展或页面脚本问题。不要因此直接改全局隐私级别，也不要从陌生弹窗下载所谓登录修复程序。</p>
+<h2 id="heading-2">需要时只做一次单站对照</h2>
+<p>确认自己愿意让当前可信网站临时获得例外后，再使用盾牌中的该站保护开关。Mozilla 说明关闭当前站点保护会加入站点例外并重新加载，其他站点仍保留保护。</p>
+<ol>
+<li>保持同一节点、同一网址和同一浏览器窗口。</li>
+<li>暂时更改当前站点开关后，测试原先失效的功能。</li>
+<li>记录是否恢复，随后用同一路径重新开启保护，确认例外移除。</li>
+<li>不需要提交密码就能复现的问题，优先在输入密码前验证按钮或表单动作。</li>
+</ol>
+<p>这一步有隐私取舍，应由使用者按网站信任程度决定。本文不建议长期关闭全部站点保护，也不承诺单站例外能解决所有登录问题。</p>
+<h2 id="heading-3">怎样解释结果</h2>
+<p>仅在单站对照时恢复：说明该站资源与保护之间存在值得进一步核对的关系，可向网站反馈原功能和记录。两种状态都失败：继续查扩展、脚本错误或账号服务。同一网站在不同浏览器表现不同，也不能单独证明代理有问题，因为浏览器设置和缓存同时变化了。</p>
+<p>验收时同时记录原功能、保护状态和测试结果，并确认恢复了自己的日常隐私选择。选机场推荐时，线路测试与浏览器兼容排障分别记录，能让服务可用性的判断更具体。</p>
+<h2 id="heading-4">官方来源与核验日期</h2>
+<p>以下资料于 2026-10-04 查阅；本文的测试步骤是基于这些资料整理的操作建议，不代表本站做过服务商实测。</p>
+<ul>
+<li><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop">Mozilla：桌面 Firefox 增强型跟踪保护</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection">MDN：Firefox 跟踪保护与页面资源</a></li>
+</ul>
+</div>
+<div class="article-likes" data-pagefind-ignore>
+<button id="page-like" class="like-button" type="button" aria-pressed="false" aria-describedby="page-like-message" disabled>
+<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+<span id="page-like-label">点赞</span><span id="page-like-count">—</span>
+</button><p id="page-like-message" role="status"></p>
+</div>
+<div class="article-tags" data-pagefind-ignore><a href="https://www.wangpaivpn.com/tags/airport-recommendation/"># 机场推荐</a><a href="https://www.wangpaivpn.com/tags/privacy/"># 网络隐私</a></div>
+<nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/vpn-compliance-privacy/">← 上一篇</a><a href="https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/">下一篇 →</a></nav>
+<section class="comments-section" data-pagefind-ignore><h2>评论</h2><div id="comments"></div></section>
+</article>
+</div>
+    <div class="select-rail article-rail">
+<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#heading">这条路径适用于哪类问题</a><a class="level-2" href="#heading-1">先读取盾牌记录</a><a class="level-2" href="#heading-2">需要时只做一次单站对照</a><a class="level-2" href="#heading-3">怎样解释结果</a><a class="level-2" href="#heading-4">官方来源与核验日期</a></nav></aside>
+
+<aside class="ad-slot select-promos select-promos-side" data-ad-position="article_sidebar" data-pagefind-ignore aria-labelledby="article-promo-title">
+  <div class="promo-heading"><h2 id="article-promo-title"><span class="heading-mark" aria-hidden="true">✦</span>精选推荐</h2></div>
+  <div class="promo-grid">
+<a class="promo-card" href="https://goflybit.com/#/register?code=gPinVG8C" target="_blank" rel="sponsored noopener noreferrer" data-ad-link aria-label="FlyBit · 文章推荐（广告，在新标签页打开）">
+  <div class="promo-top"><span class="promo-logo"><img src="https://www.wangpaivpn.com/assets/media/4067699a-dae2-44d5-92eb-a900616b0868.png" alt="FlyBit · 文章推荐" width="56" height="56" decoding="async"></span><span class="promo-chip">精选推荐 <span aria-hidden="true">↗</span></span></div>
+  <div class="promo-copy"><h3>FlyBit</h3>
+<p>由此开启，下一程连接</p>
+</div>
+  <div class="promo-bottom"><span class="promo-cta">免费试用 <span aria-hidden="true">↗</span></span></div>
+</a>
+
+<a class="promo-card" href="https://99ba.net/#/register?code=sExBbdk9" target="_blank" rel="sponsored noopener noreferrer" data-ad-link aria-label="99吧 · 文章推荐（广告，在新标签页打开）">
+  <div class="promo-top"><span class="promo-logo"><img src="https://www.wangpaivpn.com/assets/media/ef5a4036-a939-423f-a2e7-465cce4d366d.jpg" alt="99吧 · 文章推荐" width="56" height="56" decoding="async"></span><span class="promo-chip">精选推荐 <span aria-hidden="true">↗</span></span></div>
+  <div class="promo-copy"><h3>99吧</h3>
+<p>探索更多，连接更多可能</p>
+</div>
+  <div class="promo-bottom"><span class="promo-cta">免费试用 <span aria-hidden="true">↗</span></span></div>
+</a>
+</div>
+</aside>
+</div>
+  </div>
+
+</main>
+</div>
+<button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" hidden>
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-5 5 5-5 5 5"/></svg>
+</button>
+</div>
+
+<footer class="site-footer">
+  
+  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span>了解 · 体验 · 选择</span></div>
+</footer>
+
+
+
+<dialog id="search-dialog" class="reader-dialog site-search" aria-labelledby="search-title" data-reader-dialog data-pagefind-ignore>
+<header class="reader-dialog-header"><h2 id="search-title">搜索文章</h2><button class="dialog-close" type="button" data-close-dialog aria-label="关闭搜索" title="关闭搜索">×</button></header>
+<div class="reader-dialog-body">
+
+<div id="site-search-ui" data-module="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.js" data-stylesheet="https://www.wangpaivpn.com/pagefind/pagefind-component-ui.css" hidden>
+
+<pagefind-config bundle-path="https://www.wangpaivpn.com/pagefind/" base-url="https://www.wangpaivpn.com/" lang="zh-cn" no-worker></pagefind-config>
+<pagefind-input placeholder="搜索文章标题或正文"></pagefind-input>
+<pagefind-summary></pagefind-summary>
+<pagefind-results></pagefind-results>
+</div>
+<p id="search-status" class="search-status" role="status">正在加载搜索…</p>
+<button id="search-retry" class="button" type="button" hidden>重新加载</button>
+
+</div>
+</dialog>
+
+<script id="blog-comments-config" type="application/json">{"comments":true,"likes":true,"locale":"zh-CN","pageKey":"/p/3eeaecad-859f-4e2a-b5ff-8a18b29c2a86/","pageTitle":"网页能打开但登录按钮没反应？查看 Firefox 单站跟踪保护","server":"https://upfqpobmiewm.sealosgzg.site","site":"xblog-a7a10037-229f-47c1-8a18-2d3a50e13cca","views":true,"viewsBase":0}</script>
+
+</body>
+</html>
