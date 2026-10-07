@@ -4,23 +4,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>开着代理为什么网站仍问位置？Chrome 定位权限的两层核对 · 王牌VPN - 机场推荐与网络指南</title>
-<meta name="description" content="Chrome 开着机场代理仍请求定位正常吗？按网站位置权限、Windows 位置设置及实际功能结果做检查，避免把出口 IP 当成全部位置隐私。">
-<meta name="keywords" content="机场推荐,Chrome定位权限,Windows位置设置,浏览器隐私">
-<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/">
-<meta property="og:title" content="开着代理为什么网站仍问位置？Chrome 定位权限的两层核对">
-<meta property="og:description" content="Chrome 开着机场代理仍请求定位正常吗？按网站位置权限、Windows 位置设置及实际功能结果做检查，避免把出口 IP 当成全部位置隐私。">
-<meta property="og:url" content="https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/">
+<title>网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤 · 王牌VPN - 机场推荐与网络指南</title>
+<meta name="description" content="Chrome 网站循环登录怎样排查？记录跳转域名和 Cookie 条件，只清理已确认站点数据，重新登录验证原任务并保留其他网站设置。">
+<meta name="keywords" content="机场推荐,Chrome循环登录,单站Cookie清理,浏览器排障">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/">
+<meta property="og:title" content="网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤">
+<meta property="og:description" content="Chrome 网站循环登录怎样排查？记录跳转域名和 Cookie 条件，只清理已确认站点数据，重新登录验证原任务并保留其他网站设置。">
+<meta property="og:url" content="https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="王牌VPN - 机场推荐与网络指南">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png"><meta property="og:image:alt" content="王牌VPN - 机场推荐与网络指南">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开着代理为什么网站仍问位置？Chrome 定位权限的两层核对">
-<meta name="twitter:description" content="Chrome 开着机场代理仍请求定位正常吗？按网站位置权限、Windows 位置设置及实际功能结果做检查，避免把出口 IP 当成全部位置隐私。">
+<meta name="twitter:title" content="网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤">
+<meta name="twitter:description" content="Chrome 网站循环登录怎样排查？记录跳转域名和 Cookie 条件，只清理已确认站点数据，重新登录验证原任务并保留其他网站设置。">
 <meta name="twitter:image" content="https://www.wangpaivpn.com/assets/media/a865ae08-f05c-4114-a261-28a46aea0e8d.png">
-<meta name="author" content="小王"><meta property="article:published_time" content="2026-10-06T09:38:08&#43;08:00"><meta property="article:modified_time" content="2026-10-06T09:38:19&#43;08:00"><meta property="article:tag" content="机场推荐"><meta property="article:tag" content="网络隐私"><meta property="article:tag" content="Windows">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/#article","@type":"BlogPosting","author":{"@type":"Person","name":"小王"},"dateModified":"2026-10-06T09:38:19+08:00","datePublished":"2026-10-06T09:38:08+08:00","description":"Chrome 开着机场代理仍请求定位正常吗？按网站位置权限、Windows 位置设置及实际功能结果做检查，避免把出口 IP 当成全部位置隐私。","headline":"开着代理为什么网站仍问位置？Chrome 定位权限的两层核对","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/","name":"开着代理为什么网站仍问位置？Chrome 定位权限的两层核对","position":2}]}]}</script>
+<meta name="author" content="小王"><meta property="article:published_time" content="2026-10-07T09:37:53&#43;08:00"><meta property="article:modified_time" content="2026-10-07T09:37:58&#43;08:00"><meta property="article:tag" content="机场推荐"><meta property="article:tag" content="网络隐私">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/#article","@type":"BlogPosting","author":{"@type":"Person","name":"小王"},"dateModified":"2026-10-07T09:37:58+08:00","datePublished":"2026-10-07T09:37:53+08:00","description":"Chrome 网站循环登录怎样排查？记录跳转域名和 Cookie 条件，只清理已确认站点数据，重新登录验证原任务并保留其他网站设置。","headline":"网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/","name":"网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤","position":2}]}]}</script>
 
 <script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
@@ -66,7 +66,7 @@
 <div class="article-viewport"><div class="article-scroll">
 <main id="main" tabindex="-1" class="select-shell select-reading">
 
-<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐与网络指南</a></li><li><span aria-current="page">开着代理为什么网站仍问位置？Chrome 定位权限的两层核对</span></li></ol></nav>
+<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐与网络指南</a></li><li><span aria-current="page">网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤</span></li></ol></nav>
 
 
   <div class="select-columns reading-columns">
@@ -74,68 +74,63 @@
 <article data-pagefind-body>
 <header class="article-header">
 <div class="eyebrow" data-pagefind-ignore>王牌指南</div>
-<h1 data-pagefind-meta="title">开着代理为什么网站仍问位置？Chrome 定位权限的两层核对</h1>
-<div class="metadata" data-pagefind-ignore><span>小王</span><time datetime="2026-10-06T09:38:08&#43;08:00">2026-10-06</time><span><span id="page-views">—</span> 次阅读</span></div>
-<div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></div>
+<h1 data-pagefind-meta="title">网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤</h1>
+<div class="metadata" data-pagefind-ignore><span>小王</span><time datetime="2026-10-07T09:37:53&#43;08:00">2026-10-07</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></div>
 </header>
-<div class="prose"><p>开启代理后，地图或本地服务仍弹出位置请求，并不自动表示代理断开。网络出口与浏览器申请设备位置，是两个不同的检查对象。</p>
-<p>本文以 Windows 上的 Chrome 为例，帮助你核对自己允许了什么，不承诺代理让网站无法获得任何位置线索。</p>
-<p><img src="https://www.wangpaivpn.com/assets/media/ff58885d-2e4e-4964-843d-669b2b040958.png" alt="网站位置许可和系统位置许可是两道独立的控制"></p>
-<p><em>示意图：网站与系统位置许可分别核对，代理状态不替代权限检查。</em></p>
-<h2 id="heading">位置请求为什么仍会出现</h2>
-<p><a href="https://support.google.com/chrome/answer/142065?co=GENIE.Platform%3DDesktop&amp;hl=en">Chrome 官方帮助</a>说明网站使用位置需要相应许可。<a href="https://developer.chrome.com/blog/changes-location-permissions-windows">Chrome 开发者说明</a>进一步介绍了 Windows 下的网站许可与系统位置许可：允许网站后，Chrome 还需要按系统规则访问设备位置。</p>
-<p>因此，开启网络代理不会自动撤销网站已经获得的定位权限，也不能把所有定位功能等同于按 IP 判断地区。应分别核对权限与网络路径。</p>
-<h2 id="heading-1">先检查这个网站的许可</h2>
+<div class="prose"><p>网站可以打开，登录后却又回到登录页，原因可能涉及站点数据、Cookie 条件、账号状态或网络变化。先缩小浏览器状态的检查范围，比直接删除整个浏览器的数据更容易留下可解释的对照。</p>
+<p>本文适用于桌面 Chrome 的单站排查。清理会让相关站点退出登录或丢失保存的偏好；操作前确认自己能恢复登录，并保存尚未提交的内容。</p>
+<p><img src="https://www.wangpaivpn.com/assets/media/30d12400-004b-4136-8cac-bf51f42f8b98.png" alt="从多个站点数据中仅选择一个已确认站点清理并重新验收的示意"></p>
+<p><em>示意图：先确认目标站点，再清理它的本地数据并验收登录。</em></p>
+<h2 id="heading">先确认问题发生在哪个域名</h2>
+<p>记录入口页面、登录页面和返回页面的主机名，以及循环发生的时间。使用第三方身份服务时，登录涉及的域名可能不止一个；先按网站正式说明确认关系，不凭名称相似就批量清理。</p>
+<p><a href="https://support.google.com/chrome/answer/95647?hl=en">Google 的 Cookie 说明</a>指出，Cookie 可用于保持登录状态和保存偏好，删除后可能退出登录。清理它们只是重建本地站点状态，不会撤销服务端账号、不改变机场订阅，也不保证解决所有认证问题。</p>
+<h2 id="heading-1">按顺序清理一个已确认站点</h2>
 <ol>
-<li>打开要检查的网站，核对完整域名；无需为了检查登录敏感账号。</li>
-<li>从地址栏的站点信息进入网站设置，查看位置权限是允许、询问还是阻止，以当前 Chrome 界面为准。</li>
-<li>不需要定位时，可只撤销这个网站的位置许可，重新加载页面观察请求与功能状态。</li>
-<li>确实需要地图等位置功能时，先判断该站点是否值得授权，再按实际用途决定，不因为页面催促就允许所有网站。</li>
+<li>关闭该站尚未完成的编辑或上传，私下记下原错误；不要复制 Cookie、令牌或完整认证 URL 到公开求助信息。</li>
+<li>进入 Chrome“设置 → 隐私和安全 → 第三方 Cookie”，按当前界面打开“查看所有网站数据和权限”。也可从站点设置的数据管理入口找到对应列表。</li>
+<li>搜索已经核对的站点名称或域名，检查匹配结果，避免选中同名但无关的站点。</li>
+<li>仅删除本次要排查的站点数据并确认。不要把“删除全部网站数据”当成这一流程中的必需步骤。</li>
+<li>重新从该站正式入口登录，完成一次原本失败的操作，再关闭并重开页面检查状态。</li>
 </ol>
-<p>这一步调整的是站点权限，不改变机场节点或套餐；关闭权限也可能使依赖定位的功能无法自动工作。</p>
-<h2 id="-windows-">再核对 Windows 的系统许可</h2>
-<p>在 Windows 设置的隐私与安全位置页面中查看位置服务与适用的应用许可。系统对桌面应用的控制方式可能与单独列出的应用不同，以该页面和官方说明为准。受组织管理的电脑交由管理员处理。</p>
-<p>系统许可和网站许可需要分别记下，不用“曾点过一次允许”推定现在两层都生效。也不要为了一个位置弹窗把所有位置服务反复开关，影响其他应用。</p>
-<h2 id="heading-2">用一张表验收</h2>
+<p>菜单名称或布局可能随版本变化，应对照文末官方说明；不要依赖过时的内部设置 URL。</p>
+<h2 id="heading-2">清理后仍循环，接着查什么</h2>
 <table>
 <thead>
 <tr>
-<th>项目</th>
-<th>观察结果</th>
+<th>现象</th>
+<th>下一项核对</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>网站完整域名及访问时间</td>
-<td>待填写</td>
+<td>只有第三方登录失败</td>
+<td>网站是否要求相关第三方 Cookie；核对单站设置</td>
 </tr>
 <tr>
-<td>该站位置许可</td>
-<td>允许／询问／阻止</td>
+<td>切换节点后才失效</td>
+<td>固定节点复现，检查账号的正式登录提示</td>
 </tr>
 <tr>
-<td>系统位置设置与可见控制</td>
-<td>待填写</td>
+<td>所有设备都失败</td>
+<td>网站或账号支持信息，而非只改本机 Cookie</td>
 </tr>
 <tr>
-<td>调整后的位置请求与实际功能</td>
-<td>待填写</td>
-</tr>
-<tr>
-<td>代理路径是否单独核验</td>
-<td>是／未核验</td>
+<td>清理后暂时正常又复发</td>
+<td>记录复发条件，核对扩展与网站流程</td>
 </tr>
 </tbody>
 </table>
-<p>网站仍显示某个地区时，不要立刻认定它绕过许可取得了设备精确位置。地区显示可能来自其他信息；若要判断来源，查看该服务的说明和隐私政策，保留不确定项，不反复换节点来代替权限检查。</p>
-<h2 id="heading-3">完成标准</h2>
-<p>你能说明网站位置许可和系统许可的当前状态，并知道代理出口需要另一组网络证据，就完成这次隐私核对。阅读机场推荐时，“出口变化”可以是一项网络观察，但它不能单独证明浏览器全部位置权限已被撤销。</p>
+<p>Google 文档指出，依赖第三方 Cookie 的网站可能在拦截条件下异常。若确需调整，先确认该站正式要求，按单站范围与实际界面操作，并在验收后复查临时例外；不为了排查一个网站全局允许第三方 Cookie。</p>
+<p>无痕窗口还可能采用不同的 Cookie 和扩展条件，因此“无痕能登录”或“无痕不能登录”只是一条对照信息，不能单独证明节点有问题。</p>
+<h2 id="heading-3">怎样算验收完成</h2>
+<p>保持设备、节点和目标任务相同，记录清理前后是否能登录、完成原操作、重新打开页面。其他常用网站应保留预期登录状态。整理机场推荐的客户端体验时，明确区分本地站点数据、网站认证规则和网络路径，避免把 Cookie 清理结果写成线路稳定性的结论。</p>
 <h2 id="heading-4">来源与核验日期</h2>
 <ul>
-<li><a href="https://support.google.com/chrome/answer/142065?co=GENIE.Platform%3DDesktop&amp;hl=en">Google Chrome 帮助：位置设置</a></li>
-<li><a href="https://developer.chrome.com/blog/changes-location-permissions-windows">Chrome Developers：Windows 位置许可的两层控制</a></li>
+<li><a href="https://support.google.com/chrome/answer/95647?hl=en">Google：Cookie 用途、单站删除与第三方 Cookie</a></li>
+<li><a href="https://support.google.com/chrome/answer/114662?hl=en">Google：单站权限和数据设置</a></li>
 </ul>
-<p>官方资料核验日期：2026-10-06。文中的表格和流程用于自行检查，不代表本站对某家机场的实测结论。</p>
+<p>官方资料核验日期：2026-10-07。本文提供自行操作与记录的方法，不代表本站对某家机场的实测结论。</p>
 </div>
 <div class="article-likes" data-pagefind-ignore>
 <button id="page-like" class="like-button" type="button" aria-pressed="false" aria-describedby="page-like-message" disabled>
@@ -143,13 +138,13 @@
 <span id="page-like-label">点赞</span><span id="page-like-count">—</span>
 </button><p id="page-like-message" role="status"></p>
 </div>
-<div class="article-tags" data-pagefind-ignore><a href="https://www.wangpaivpn.com/tags/airport-recommendation/"># 机场推荐</a><a href="https://www.wangpaivpn.com/tags/privacy/"># 网络隐私</a><a href="https://www.wangpaivpn.com/tags/windows/"># Windows</a></div>
-<nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/chrome-single-site-cookie-reset/">← 上一篇</a><a href="https://www.wangpaivpn.com/posts/private-window-proxy-ip-boundary/">下一篇 →</a></nav>
+<div class="article-tags" data-pagefind-ignore><a href="https://www.wangpaivpn.com/tags/airport-recommendation/"># 机场推荐</a><a href="https://www.wangpaivpn.com/tags/privacy/"># 网络隐私</a></div>
+<nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/vpn-compliance-privacy/">← 上一篇</a><a href="https://www.wangpaivpn.com/posts/chrome-location-permission-proxy/">下一篇 →</a></nav>
 <section class="comments-section" data-pagefind-ignore><h2>评论</h2><div id="comments"></div></section>
 </article>
 </div>
     <div class="select-rail article-rail">
-<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#heading">位置请求为什么仍会出现</a><a class="level-2" href="#heading-1">先检查这个网站的许可</a><a class="level-2" href="#-windows-">再核对 Windows 的系统许可</a><a class="level-2" href="#heading-2">用一张表验收</a><a class="level-2" href="#heading-3">完成标准</a><a class="level-2" href="#heading-4">来源与核验日期</a></nav></aside>
+<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#heading">先确认问题发生在哪个域名</a><a class="level-2" href="#heading-1">按顺序清理一个已确认站点</a><a class="level-2" href="#heading-2">清理后仍循环，接着查什么</a><a class="level-2" href="#heading-3">怎样算验收完成</a><a class="level-2" href="#heading-4">来源与核验日期</a></nav></aside>
 
 <aside class="ad-slot select-promos select-promos-side" data-ad-position="article_sidebar" data-pagefind-ignore aria-labelledby="article-promo-title">
   <div class="promo-heading"><h2 id="article-promo-title"><span class="heading-mark" aria-hidden="true">✦</span>精选推荐</h2></div>
@@ -205,7 +200,7 @@
 </div>
 </dialog>
 
-<script id="blog-comments-config" type="application/json">{"comments":true,"likes":true,"locale":"zh-CN","pageKey":"/p/6bb73a64-2f9c-48c6-9e09-b98840cfe828/","pageTitle":"开着代理为什么网站仍问位置？Chrome 定位权限的两层核对","server":"https://upfqpobmiewm.sealosgzg.site","site":"xblog-a7a10037-229f-47c1-8a18-2d3a50e13cca","views":true,"viewsBase":0}</script>
+<script id="blog-comments-config" type="application/json">{"comments":true,"likes":true,"locale":"zh-CN","pageKey":"/p/50586a8a-9206-4966-b5eb-1bc2e4c9bae6/","pageTitle":"网站反复要求登录？Chrome 只清理该站 Cookie 的排查步骤","server":"https://upfqpobmiewm.sealosgzg.site","site":"xblog-a7a10037-229f-47c1-8a18-2d3a50e13cca","views":true,"viewsBase":0}</script>
 
 </body>
 </html>
