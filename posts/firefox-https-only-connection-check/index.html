@@ -20,13 +20,25 @@
 <meta name="twitter:description" content="机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。">
 <meta name="twitter:image" content="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp">
 <meta name="author" content="王牌飞行员"><meta property="article:published_time" content="2026-10-03T14:10:18&#43;08:00"><meta property="article:modified_time" content="2026-10-03T14:10:25&#43;08:00"><meta property="article:tag" content="网络隐私"><meta property="article:tag" content="Windows">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌飞行员"},"dateModified":"2026-10-03T14:10:25+08:00","datePublished":"2026-10-03T14:10:18+08:00","description":"机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。","headline":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/","name":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","position":2}]}]}</script>
+
+
+
+<script type="application/ld+json">{
+"@context":"https://schema.org","@graph":[{
+"@type":"BlogPosting","@id":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/#article","url":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/","mainEntityOfPage":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/",
+"headline":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","description":"机场节点正常但 Firefox 提示安全站点不可用怎么办？核对 HTTPS-Only 模式、实际代理路径与错误类型，完成可复查的连接验收。","inLanguage":"zh-CN",
+"datePublished":"2026-10-03T14:10:18+08:00","dateModified":"2026-10-03T14:10:25+08:00",
+"author":{"@type":"Person","name":"王牌飞行员","url":"https://www.wangpaivpn.com/posts/about-site/#author-pilot"},
+"publisher":{"@type":"Organization","name":"王牌VPN - 机场推荐与网络指南","url":"https://www.wangpaivpn.com/","logo":{"@type":"ImageObject","url":"https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp"}}
+
+},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"王牌VPN - 机场推荐与网络指南","item":"https://www.wangpaivpn.com/"},{"@type":"ListItem","position":2,"name":"节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级","item":"https://www.wangpaivpn.com/posts/firefox-https-only-connection-check/"}]}]}</script>
+
 
 <script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
-<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin-1.1.4.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
 <link rel="icon" href="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp">
@@ -37,7 +49,7 @@
 <script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
 
 <script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
-<script defer src="https://www.wangpaivpn.com/assets/theme/markdown-it.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/purify.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/featured.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/seo-links-1.1.4.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FZ9RE9CNY"></script>
 <script>
@@ -83,10 +95,11 @@
 <header class="article-header">
 <div class="eyebrow" data-pagefind-ignore>王牌指南</div>
 <h1 data-pagefind-meta="title">节点正常却提示安全站点不可用？检查 Firefox 的 HTTPS 升级</h1>
-<div class="metadata" data-pagefind-ignore><span>王牌飞行员</span><time datetime="2026-10-03T14:10:18&#43;08:00">2026-10-03</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="metadata" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/about-site/#author-pilot" rel="author">王牌飞行员</a><time datetime="2026-10-03T14:10:18&#43;08:00">2026-10-03</time><span><span id="page-views">—</span> 次阅读</span></div>
 <div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a></div>
 </header>
-<div class="prose"><p>节点延迟正常，其他网页也能打开，只有一个链接在 Firefox 里提示“安全站点不可用”，此时先记录浏览器的完整提示。Firefox 的 HTTPS-Only 模式会尝试把 HTTP 地址升级成 HTTPS；目标没有可用的 HTTPS 服务时，浏览器可能在进入网页前阻止继续访问。</p>
+<div class="prose">
+<p>节点延迟正常，其他网页也能打开，只有一个链接在 Firefox 里提示“安全站点不可用”，此时先记录浏览器的完整提示。Firefox 的 HTTPS-Only 模式会尝试把 HTTP 地址升级成 HTTPS；目标没有可用的 HTTPS 服务时，浏览器可能在进入网页前阻止继续访问。</p>
 <p>本文针对桌面版 Firefox 的这类提示，给出一套保持节点不变的检查流程。它也适合在参考机场推荐、试用客户端时使用：把浏览器的安全限制和线路连接结果分别记录，才能判断问题究竟发生在哪一步。</p>
 <h2 id="heading">先保存失败现场</h2>
 <p>不要立即连换多个节点。先记录四项信息：</p>
@@ -205,7 +218,7 @@
 
 <footer class="site-footer">
   
-  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span>了解 · 体验 · 选择</span></div>
+  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span><a href="https://www.wangpaivpn.com/posts/about-site/">关于本站与文章署名</a> · 了解 · 体验 · 选择</span></div>
 </footer>
 
 

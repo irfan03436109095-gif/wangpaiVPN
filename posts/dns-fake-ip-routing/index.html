@@ -20,13 +20,25 @@
 <meta name="twitter:description" content="解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。">
 <meta name="twitter:image" content="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp">
 <meta name="author" content="王牌VPN 编辑部"><meta property="article:published_time" content="2026-10-02T08:00:00&#43;08:00"><meta property="article:modified_time" content="2026-10-02T15:49:36&#43;08:00"><meta property="article:tag" content="代理协议"><meta property="article:tag" content="DNS"><meta property="article:tag" content="TUN"><meta property="article:tag" content="网络隐私">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌VPN 编辑部"},"dateModified":"2026-10-02T15:49:36+08:00","datePublished":"2026-10-02T08:00:00+08:00","description":"解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。","headline":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN - 机场推荐与网络指南","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/","name":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","position":2}]}]}</script>
+
+
+
+<script type="application/ld+json">{
+"@context":"https://schema.org","@graph":[{
+"@type":"BlogPosting","@id":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/#article","url":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/","mainEntityOfPage":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/",
+"headline":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","description":"解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。","inLanguage":"zh-CN",
+"datePublished":"2026-10-02T08:00:00+08:00","dateModified":"2026-10-02T15:49:36+08:00",
+"author":{"@type":"Organization","name":"王牌VPN 编辑部","url":"https://www.wangpaivpn.com/posts/about-site/#author-editorial"},
+"publisher":{"@type":"Organization","name":"王牌VPN - 机场推荐与网络指南","url":"https://www.wangpaivpn.com/","logo":{"@type":"ImageObject","url":"https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp"}}
+
+},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"王牌VPN - 机场推荐与网络指南","item":"https://www.wangpaivpn.com/"},{"@type":"ListItem","position":2,"name":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","item":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/"}]}]}</script>
+
 
 <script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
-<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin-1.1.4.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
 <link rel="icon" href="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp">
@@ -37,7 +49,7 @@
 <script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
 
 <script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
-<script defer src="https://www.wangpaivpn.com/assets/theme/markdown-it.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/purify.min.js"></script><script defer src="https://www.wangpaivpn.com/assets/theme/featured.js"></script>
+<script defer src="https://www.wangpaivpn.com/assets/theme/seo-links-1.1.4.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FZ9RE9CNY"></script>
 <script>
@@ -83,10 +95,11 @@
 <header class="article-header">
 <div class="eyebrow" data-pagefind-ignore>王牌指南</div>
 <h1 data-pagefind-meta="title">DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页</h1>
-<div class="metadata" data-pagefind-ignore><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="metadata" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/about-site/#author-editorial" rel="author">王牌VPN 编辑部</a><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><span><span id="page-views">—</span> 次阅读</span></div>
 <div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></div>
 </header>
-<div class="prose"><p>节点延迟测试正常，却只有部分网页打不开，问题可能发生在域名解析、请求分流或本地接管环节。DNS、Fake-IP 与 TUN 分别承担不同任务，把它们分清楚，比随机替换配置更容易找到原因。</p>
+<div class="prose">
+<p>节点延迟测试正常，却只有部分网页打不开，问题可能发生在域名解析、请求分流或本地接管环节。DNS、Fake-IP 与 TUN 分别承担不同任务，把它们分清楚，比随机替换配置更容易找到原因。</p>
 <h2 id="dns">DNS：先把域名转换为可连接的信息</h2>
 <p>应用访问域名时，通常需要通过 DNS 获取相应记录，再建立连接。代理环境里，还可能先解析节点服务器地址，随后才处理目标网站域名；这两类查询的路径不一定相同。</p>
 <p>因此，排查时要先问：“无法解析的是节点地址，还是目标网站？”如果客户端还没有连接节点，就依赖该节点去完成建立连接所需的解析，配置可能形成依赖循环。</p>
@@ -177,7 +190,7 @@
 
 <footer class="site-footer">
   
-  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span>了解 · 体验 · 选择</span></div>
+  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span><a href="https://www.wangpaivpn.com/posts/about-site/">关于本站与文章署名</a> · 了解 · 体验 · 选择</span></div>
 </footer>
 
 
