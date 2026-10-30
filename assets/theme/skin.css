@@ -17,3 +17,18 @@
 .wg-page .prose a.wg-invite-link{display:inline-flex;align-items:center;max-width:100%;padding:8px 15px;margin:3px 0;border:1px solid var(--accent);border-radius:7px;background:var(--accent);color:var(--surface);font-size:14px;font-weight:650;line-height:1.7;text-decoration:none;overflow-wrap:anywhere}.wg-page .prose a.wg-invite-link:hover{filter:brightness(1.1);color:var(--surface)}.wg-page .prose a.wg-invite-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .wg-page .wg-footer{width:100%;max-width:none;flex-shrink:0;margin:0;padding:18px 24px}
 @media(max-width:760px){.wg-hero-map{display:none}.wg-page .wg-footer{padding:18px}.wg-intro{gap:0}.wg-intro h1{font-size:40px}.wg-page .wg-routes{margin:0}.wg-routes>a{padding:12px 15px}}
+/* 1.0.3：首页分类标签置左，整栏随页面滚动，不再创建内部滚动区域。 */
+.wg-page .home-shell{grid-template-columns:254px minmax(0,1fr)}
+.wg-page .home-rail{position:static;top:auto;display:block;max-height:none;height:auto;overflow:visible;align-self:start}
+.wg-page .home-rail>.home-sidebar,.wg-page .home-rail>.ad-slot{max-height:none;height:auto;overflow:visible;flex:none}
+/* 图文广告用完整小图配合现有文字；不放大或裁切商家标识。 */
+.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px;padding:15px}
+.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed>.ad-image{display:block;width:48px;height:48px;max-width:48px;max-height:48px;aspect-ratio:auto;object-fit:contain;object-position:center;margin:0;padding:3px;border-radius:7px;background:#fff}
+.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed>.ad-copy{min-width:0;padding:0;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed>.ad-copy h2,.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed>.ad-copy h3,.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed>.ad-copy h4{font-size:14px;line-height:1.5;margin:0 0 5px}
+.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed>.ad-copy p{margin:0;color:var(--muted)}
+.wg-page [data-ad-position$="_sidebar"] .ad-card:not(.ad-card-mixed)>.ad-image{display:block;width:auto;height:auto;max-width:100%;max-height:180px;object-fit:contain;margin:0 auto}
+.wg-page .article-header h1{text-wrap:balance;word-break:normal;overflow-wrap:break-word}
+@media(max-width:980px) and (min-width:761px){.wg-page .home-shell{grid-template-columns:215px minmax(0,1fr)}}
+@media(max-width:760px){.wg-page .home-shell{grid-template-columns:1fr}.wg-page .home-shell>.content-column{order:1}.wg-page .home-shell>.home-rail{order:2}.wg-page .home-rail>.home-sidebar{display:none}.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed{grid-template-columns:48px minmax(0,1fr)}}
+
