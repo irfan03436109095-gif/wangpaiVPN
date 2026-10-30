@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="wangpai-select">
+<html lang="zh-CN" data-theme="wangpai-guide">
 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页 · 王牌VPN - 机场推荐</title>
+<title>DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页 · 王牌VPN｜机场推荐与订阅教程</title>
 <meta name="description" content="解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。">
 <meta name="keywords" content="DNS解析,Fake-IP,规则分流,代理DNS">
 <meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.wangpaivpn.com/posts/dns-fake-ip-routing/">
@@ -12,33 +12,21 @@
 <meta property="og:description" content="解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。">
 <meta property="og:url" content="https://www.wangpaivpn.com/posts/dns-fake-ip-routing/">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="王牌VPN - 机场推荐">
+<meta property="og:site_name" content="王牌VPN｜机场推荐与订阅教程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp"><meta property="og:image:alt" content="王牌VPN - 机场推荐">
+<meta property="og:image" content="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp"><meta property="og:image:alt" content="王牌VPN｜机场推荐与订阅教程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页">
 <meta name="twitter:description" content="解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。">
 <meta name="twitter:image" content="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp">
 <meta name="author" content="王牌VPN 编辑部"><meta property="article:published_time" content="2026-10-02T08:00:00&#43;08:00"><meta property="article:modified_time" content="2026-10-02T15:49:36&#43;08:00"><meta property="article:tag" content="代理协议"><meta property="article:tag" content="DNS"><meta property="article:tag" content="TUN"><meta property="article:tag" content="网络隐私">
-
-
-
-<script type="application/ld+json">{
-"@context":"https://schema.org","@graph":[{
-"@type":"BlogPosting","@id":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/#article","url":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/","mainEntityOfPage":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/",
-"headline":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","description":"解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。","inLanguage":"zh-CN",
-"datePublished":"2026-10-02T08:00:00+08:00","dateModified":"2026-10-02T15:49:36+08:00",
-"author":{"@type":"Organization","name":"王牌VPN 编辑部","url":"https://www.wangpaivpn.com/posts/about-site/#author-editorial"},
-"publisher":{"@type":"Organization","name":"王牌VPN - 机场推荐","url":"https://www.wangpaivpn.com/","logo":{"@type":"ImageObject","url":"https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp"}}
-
-},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"王牌VPN - 机场推荐","item":"https://www.wangpaivpn.com/"},{"@type":"ListItem","position":2,"name":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","item":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/"}]}]}</script>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/#article","@type":"BlogPosting","author":{"@type":"Person","name":"王牌VPN 编辑部"},"dateModified":"2026-10-02T15:49:36+08:00","datePublished":"2026-10-02T08:00:00+08:00","description":"解释 DNS、DoH、Fake-IP、IPv6 和规则分流之间的关系，介绍节点正常但网页打不开时的排查顺序，避免重复改配置造成解析循环或流量走错路径。","headline":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","inLanguage":"zh-CN","mainEntityOfPage":{"@id":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/","@type":"WebPage"},"url":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.wangpaivpn.com/","name":"王牌VPN｜机场推荐与订阅教程","position":1},{"@type":"ListItem","item":"https://www.wangpaivpn.com/posts/dns-fake-ip-routing/","name":"DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页","position":2}]}]}</script>
 
 <script>(()=>{let mode='system';try{const saved=localStorage.getItem('reader-theme');if(['system','light','dark'].includes(saved))mode=saved}catch{}const root=document.documentElement;root.dataset.colorMode=mode;root.classList.toggle('dark',mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))})();</script>
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/style.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/advertisements.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/search.css"><script defer src="https://www.wangpaivpn.com/assets/theme/search.js"></script>
-<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin-1.1.4.css">
+<link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/skin.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/viewer.css">
 <link rel="stylesheet" href="https://www.wangpaivpn.com/assets/theme/reader.css">
 <link rel="icon" href="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp">
@@ -49,28 +37,18 @@
 <script defer src="https://www.wangpaivpn.com/assets/theme/image-viewer.js"></script>
 
 <script defer src="https://www.wangpaivpn.com/assets/theme/interactions.js"></script>
-<script defer src="https://www.wangpaivpn.com/assets/theme/seo-links-1.1.4.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1FZ9RE9CNY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1FZ9RE9CNY');
-</script>
-
-<style id="xblog-article-images-half">main article .prose img{width:50%;max-width:50%;height:auto;display:block;margin-left:auto;margin-right:auto;}</style>
+<script defer src="https://www.wangpaivpn.com/assets/theme/invites.js"></script>
+<style id="xblog-article-images-responsive">main article .prose img{width:auto;max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;}</style>
 
 <script defer src="https://www.wangpaivpn.com/assets/xblog/google-analytics.js" data-xblog-google-analytics="G-1FZ9RE9CNY" data-site-hosts="www.wangpaivpn.com"></script></head>
 
-<body class="select-site article-page">
+<body class="reader-page wg-page article-page">
 <a class="skip" href="#main">跳到正文</a>
 
 <header class="site-header">
 <div class="header-inner">
-<a class="brand" href="https://www.wangpaivpn.com/"><img src="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp" alt="" width="38" height="38"><span>王牌VPN - 机场推荐</span></a>
-<nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/">首页</a><a href="https://www.wangpaivpn.com/categories/airport-recommendation/">机场推荐</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a><a href="https://www.wangpaivpn.com/categories/client-tutorials/">客户端教程</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">常见问题</a><a href="https://www.wangpaivpn.com/categories/industry-insights/">行业观察</a><a href="https://www.wangpaivpn.com/categories/compliance-privacy/">合规与隐私</a></nav>
+<a class="brand" href="https://www.wangpaivpn.com/"><img src="https://www.wangpaivpn.com/assets/media/9cbc09e5-860a-4d5b-8732-9231a4ba60e2.webp" alt="" width="38" height="38"><span>王牌VPN｜机场推荐与订阅教程</span></a>
+<nav id="site-navigation" aria-label="站点导航"><a href="https://www.wangpaivpn.com/">首页</a><a href="https://www.wangpaivpn.com/posts/flybit-99ba-airport-recommendation/">机场对比</a><a href="https://www.wangpaivpn.com/posts/airport-recommendation-guide/">选购指南</a><a href="https://www.wangpaivpn.com/posts/airport-subscription-beginner-illustrated-2026/">新手上手</a><a href="https://www.wangpaivpn.com/categories/troubleshooting/">连接排查</a><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与测速</a><a href="https://www.wangpaivpn.com/posts/about-site/">关于与推广</a></nav>
 <a class="search-toggle" href="https://www.wangpaivpn.com/search/" data-open-dialog="search-dialog" aria-haspopup="dialog" aria-controls="search-dialog" aria-label="搜索" title="搜索"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
 <button id="theme-mode" class="theme-toggle theme-cycle" type="button" aria-label="明暗模式：跟随系统，点击切换为明亮" title="跟随系统 · 点击切换为明亮">
 <svg class="theme-icon-system" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
@@ -85,23 +63,21 @@
 </div>
 </header>
 
-<div class="article-viewport"><div class="article-scroll">
-<main id="main" tabindex="-1" class="select-shell select-reading">
+<div class="page-viewport article-viewport"><div class="page-scroll article-scroll">
+<main id="main" tabindex="-1" class="shell wg-shell article-shell" data-has-toc="true">
 
-<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN - 机场推荐</a></li><li><span aria-current="page">DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页</span></li></ol></nav>
+<nav class="breadcrumbs" aria-label="面包屑导航"><ol><li><a href="https://www.wangpaivpn.com/">王牌VPN｜机场推荐与订阅教程</a></li><li><span aria-current="page">DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页</span></li></ol></nav>
 
 
-  <div class="select-columns reading-columns">
-    <div class="reading-content">
+
 <article data-pagefind-body>
 <header class="article-header">
-<div class="eyebrow" data-pagefind-ignore>王牌指南</div>
+<div class="eyebrow" data-pagefind-ignore>协议与网络 </div>
 <h1 data-pagefind-meta="title">DNS、Fake-IP 与规则分流：为什么节点正常却打不开网页</h1>
-<div class="metadata" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/about-site/#author-editorial" rel="author">王牌VPN 编辑部</a><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><span><span id="page-views">—</span> 次阅读</span></div>
+<div class="metadata" data-pagefind-ignore><span>王牌VPN 编辑部</span><time datetime="2026-10-02T08:00:00&#43;08:00">2026-10-02</time><span><span id="page-views">—</span> 次阅读</span></div>
 <div class="chips" data-pagefind-ignore><a href="https://www.wangpaivpn.com/categories/protocols-network/">协议与网络</a></div>
 </header>
-<div class="prose">
-<p>节点延迟测试正常，却只有部分网页打不开，问题可能发生在域名解析、请求分流或本地接管环节。DNS、Fake-IP 与 TUN 分别承担不同任务，把它们分清楚，比随机替换配置更容易找到原因。</p>
+<div class="prose"><p>节点延迟测试正常，却只有部分网页打不开，问题可能发生在域名解析、请求分流或本地接管环节。DNS、Fake-IP 与 TUN 分别承担不同任务，把它们分清楚，比随机替换配置更容易找到原因。</p>
 <h2 id="dns">DNS：先把域名转换为可连接的信息</h2>
 <p>应用访问域名时，通常需要通过 DNS 获取相应记录，再建立连接。代理环境里，还可能先解析节点服务器地址，随后才处理目标网站域名；这两类查询的路径不一定相同。</p>
 <p>因此，排查时要先问：“无法解析的是节点地址，还是目标网站？”如果客户端还没有连接节点，就依赖该节点去完成建立连接所需的解析，配置可能形成依赖循环。</p>
@@ -156,45 +132,30 @@
 <nav class="pagination" aria-label="相邻文章" data-pagefind-ignore><a href="https://www.wangpaivpn.com/posts/airport-connection-troubleshooting/">← 上一篇</a><a href="https://www.wangpaivpn.com/posts/sing-box-dns-migration/">下一篇 →</a></nav>
 <section class="comments-section" data-pagefind-ignore><h2>评论</h2><div id="comments"></div></section>
 </article>
-</div>
-    <div class="select-rail article-rail">
-<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#dns">DNS：先把域名转换为可连接的信息</a><a class="level-2" href="#doh-dns-">DoH：保护 DNS 传输，不替代全部网络配置</a><a class="level-2" href="#fake-ip">Fake-IP：用于客户端关联域名与连接</a><a class="level-2" href="#tun-">TUN 与规则模式分别处理什么？</a><a class="level-2" href="#heading">按四个检查点排查网页失败</a><a class="level-3" href="#1-">1. 确认当前配置</a><a class="level-3" href="#2-">2. 找到目标请求</a><a class="level-3" href="#3-">3. 阅读解析错误</a><a class="level-3" href="#4-">4. 做一次受控对照</a><a class="level-2" href="#-dns">浏览器的“安全 DNS”会不会影响规则？</a><a class="level-2" href="#ipv6-">IPv6 问题需要怎样验证？</a><a class="level-2" href="#heading-1">两个常见的配置误区</a><a class="level-2" href="#heading-2">常见问题</a><a class="level-3" href="#-dns--dns-">换公共 DNS 后恢复了，就能认定原 DNS 有问题吗？</a><a class="level-3" href="#fake-ip-">Fake-IP 会改变对外出口地址吗？</a><a class="level-3" href="#heading-3">为什么同一个节点在手机和电脑上结果不同？</a><a class="level-3" href="#heading-4">是否需要每天清空全部缓存？</a></nav></aside>
 
-<aside class="ad-slot select-promos select-promos-side" data-ad-position="article_sidebar" data-pagefind-ignore aria-labelledby="article-promo-title">
-  <div class="promo-heading"><h2 id="article-promo-title"><span class="heading-mark" aria-hidden="true">✦</span>精选推荐</h2></div>
-  <div class="promo-grid">
-<a class="promo-card" href="https://goflybit.com/#/register?code=gPinVG8C" target="_blank" rel="sponsored noopener noreferrer" data-ad-link aria-label="FlyBit · 文章推荐（广告，在新标签页打开）">
-  <div class="promo-top"><span class="promo-logo"><img src="https://www.wangpaivpn.com/assets/media/4067699a-dae2-44d5-92eb-a900616b0868.png" alt="FlyBit · 文章推荐" width="56" height="56" decoding="async"></span><span class="promo-chip">精选推荐 <span aria-hidden="true">↗</span></span></div>
-  <div class="promo-copy"><h3>FlyBit</h3>
+<div class="article-rail">
+<aside class="toc"><div>本篇目录</div><nav aria-label="文章目录"><a class="level-2" href="#dns">DNS：先把域名转换为可连接的信息</a><a class="level-2" href="#doh-dns-">DoH：保护 DNS 传输，不替代全部网络配置</a><a class="level-2" href="#fake-ip">Fake-IP：用于客户端关联域名与连接</a><a class="level-2" href="#tun-">TUN 与规则模式分别处理什么？</a><a class="level-2" href="#heading">按四个检查点排查网页失败</a><a class="level-3" href="#1-">1. 确认当前配置</a><a class="level-3" href="#2-">2. 找到目标请求</a><a class="level-3" href="#3-">3. 阅读解析错误</a><a class="level-3" href="#4-">4. 做一次受控对照</a><a class="level-2" href="#-dns">浏览器的“安全 DNS”会不会影响规则？</a><a class="level-2" href="#ipv6-">IPv6 问题需要怎样验证？</a><a class="level-2" href="#heading-1">两个常见的配置误区</a><a class="level-2" href="#heading-2">常见问题</a><a class="level-3" href="#-dns--dns-">换公共 DNS 后恢复了，就能认定原 DNS 有问题吗？</a><a class="level-3" href="#fake-ip-">Fake-IP 会改变对外出口地址吗？</a><a class="level-3" href="#heading-3">为什么同一个节点在手机和电脑上结果不同？</a><a class="level-3" href="#heading-4">是否需要每天清空全部缓存？</a></nav></aside>
+<aside class="ad-slot" aria-label="文章相关内容" data-ad-position="article_sidebar" data-pagefind-ignore><a class="ad-card ad-card-mixed" href="https://goflybit.com/#/register?code=gPinVG8C" target="_blank" rel="sponsored noopener noreferrer" aria-label="FlyBit · 文章推荐（在新标签页打开）" data-ad-link>
+<img class="ad-image" src="https://www.wangpaivpn.com/assets/media/4067699a-dae2-44d5-92eb-a900616b0868.png" alt="FlyBit · 文章推荐" loading="lazy" decoding="async">
+<div class="ad-copy"><h3>FlyBit</h3>
 <p>由此开启，下一程连接</p>
 </div>
-  <div class="promo-bottom"><span class="promo-cta">免费试用 <span aria-hidden="true">↗</span></span></div>
-</a>
-
-<a class="promo-card" href="https://99ba.net/#/register?code=sExBbdk9" target="_blank" rel="sponsored noopener noreferrer" data-ad-link aria-label="99吧 · 文章推荐（广告，在新标签页打开）">
-  <div class="promo-top"><span class="promo-logo"><img src="https://www.wangpaivpn.com/assets/media/ef5a4036-a939-423f-a2e7-465cce4d366d.jpg" alt="99吧 · 文章推荐" width="56" height="56" decoding="async"></span><span class="promo-chip">精选推荐 <span aria-hidden="true">↗</span></span></div>
-  <div class="promo-copy"><h3>99吧</h3>
+</a><a class="ad-card ad-card-mixed" href="https://99ba.net/#/register?code=sExBbdk9" target="_blank" rel="sponsored noopener noreferrer" aria-label="99吧 · 文章推荐（在新标签页打开）" data-ad-link>
+<img class="ad-image" src="https://www.wangpaivpn.com/assets/media/ef5a4036-a939-423f-a2e7-465cce4d366d.jpg" alt="99吧 · 文章推荐" loading="lazy" decoding="async">
+<div class="ad-copy"><h3>99吧</h3>
 <p>探索更多，连接更多可能</p>
 </div>
-  <div class="promo-bottom"><span class="promo-cta">免费试用 <span aria-hidden="true">↗</span></span></div>
-</a>
-</div>
-</aside>
-</div>
-  </div>
+</a></aside></div>
 
 </main>
+
+<footer class="site-footer wg-footer"><div class="wg-footer-inner"><a class="wg-footer-about" href="https://www.wangpaivpn.com/posts/about-site/">关于本站与推广说明 <span aria-hidden="true">↗</span></a><nav class="friend-links" aria-label="友情链接"><span class="friend-links-label">相关链接</span><a href="https://goflybit.com/#/register?code=gPinVG8C" target="_blank" rel="sponsored noopener noreferrer">FlyBit</a><a href="https://99ba.net/#/register?code=sExBbdk9" target="_blank" rel="sponsored noopener noreferrer">99吧</a><a href="https://t.me/five_91" target="_blank" rel="sponsored noopener noreferrer">Telegram联系</a><a href="https://t.me/RouteRadarCN" target="_blank" rel="sponsored noopener noreferrer">Telegram频道</a></nav><span>© 2026 王牌VPN。原创内容转载请注明来源。</span></div></footer>
+
 </div>
 <button id="back-to-top" class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部" hidden>
 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-5 5 5-5 5 5"/></svg>
 </button>
 </div>
-
-<footer class="site-footer">
-  <nav class="friend-links" aria-label="友情链接"><span class="friend-links-label">友情链接</span><a href="https://goflybit.com/#/register?code=gPinVG8C" target="_blank" rel="noopener noreferrer">FlyBit</a><a href="https://99ba.net/#/register?code=sExBbdk9" target="_blank" rel="noopener noreferrer">99吧</a><a href="https://t.me/five_91" target="_blank" rel="noopener noreferrer">Telegram联系</a><a href="https://t.me/RouteRadarCN" target="_blank" rel="noopener noreferrer">Telegram频道</a></nav>
-  <div class="select-footer"><span>© 2026 王牌VPN。原创内容转载请注明来源。</span><span><a href="https://www.wangpaivpn.com/posts/about-site/">关于本站与文章署名</a> · 了解 · 体验 · 选择</span></div>
-</footer>
-
 
 
 <dialog id="search-dialog" class="reader-dialog site-search" aria-labelledby="search-title" data-reader-dialog data-pagefind-ignore>
