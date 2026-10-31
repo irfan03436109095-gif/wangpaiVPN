@@ -32,3 +32,9 @@
 @media(max-width:980px) and (min-width:761px){.wg-page .home-shell{grid-template-columns:215px minmax(0,1fr)}}
 @media(max-width:760px){.wg-page .home-shell{grid-template-columns:1fr}.wg-page .home-shell>.content-column{order:1}.wg-page .home-shell>.home-rail{order:2}.wg-page .home-rail>.home-sidebar{display:none}.wg-page [data-ad-position$="_sidebar"] .ad-card-mixed{grid-template-columns:48px minmax(0,1fr)}}
 
+/* 1.0.4：文章目录与推荐放左侧，随正文一起滚动；不产生侧栏内部滚动区。 */
+.wg-page.article-page .article-rail{position:static;top:auto;display:grid;align-self:start;gap:28px;height:auto;max-height:none;overflow:visible}
+.wg-page.article-page .article-rail>.toc{position:static;top:auto;display:block;flex:none;height:auto;max-height:none;overflow:visible}
+.wg-page.article-page .article-rail>.toc>nav,.wg-page.article-page .article-rail>.toc ul,.wg-page.article-page .article-rail>.toc ol,.wg-page.article-page .article-rail>.ad-slot{position:static;top:auto;flex:none;height:auto;max-height:none;overflow:visible;overscroll-behavior:auto}
+@media(min-width:981px){.wg-page .article-shell{grid-template-columns:254px minmax(0,1fr)}}
+@media(max-width:980px){.wg-page .article-shell{display:flex;flex-direction:column;gap:0}.wg-page .article-shell>.breadcrumbs{order:0}.wg-page .article-shell>article{order:1}.wg-page.article-page .article-rail{order:2;width:100%}.wg-page.article-page .article-rail>.toc{display:none}}
