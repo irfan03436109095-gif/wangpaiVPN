@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.wangpaivpn.com/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/categories/airport-recommendation/</loc>
@@ -34,23 +34,23 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/categories/troubleshooting/</loc>
-    <lastmod>2026-11-03T14:42:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/categories/troubleshooting/page/2/</loc>
-    <lastmod>2026-11-03T14:42:44Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/page/2/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/page/3/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/page/4/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/about-site/</loc>
@@ -89,6 +89,10 @@
     <lastmod>2026-10-31T17:34:39Z</lastmod>
   </url>
   <url>
+    <loc>https://www.wangpaivpn.com/posts/chrome-extension-other-app-scope/</loc>
+    <lastmod>2026-11-08T01:33:50Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.wangpaivpn.com/posts/chrome-extension-site-access-proxy-scope/</loc>
     <lastmod>2026-10-31T17:34:39Z</lastmod>
   </url>
@@ -110,7 +114,7 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/chrome-password-warning-vpn-boundary/</loc>
-    <lastmod>2026-11-07T01:43:46Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/chrome-popup-blocked-single-site-check/</loc>
@@ -190,7 +194,7 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/vpn-compliance-privacy/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/posts/vpn-proxy-airport-differences/</loc>
@@ -230,15 +234,15 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/privacy/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/privacy/page/2/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/privacy/page/3/</loc>
-    <lastmod>2026-11-07T01:43:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/proxy-protocols/</loc>
@@ -270,6 +274,6 @@
   </url>
   <url>
     <loc>https://www.wangpaivpn.com/tags/windows/</loc>
-    <lastmod>2026-10-30T09:13:51Z</lastmod>
+    <lastmod>2026-11-08T01:33:55Z</lastmod>
   </url>
 </urlset>
